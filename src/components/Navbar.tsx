@@ -1,4 +1,11 @@
 import { useState } from "react"
+import styled from "styled-components"
+
+const A = styled.a`
+    &:hover {
+        color: silver !important;
+    }
+`
 
 const Navbar = () => {
     const [active, setActive] = useState(0)
@@ -14,20 +21,20 @@ const Navbar = () => {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         <li className="nav-item">
-                            <a className={`nav-link text-light ${active === 0 && 'active fw-bold'}`}
-                                onClick={() => setActive(0)} href="#">Sobre mí</a>
+                            <A className={`nav-link text-light ${active === 0 && 'fw-bold'}`}
+                                onClick={() => setActive(0)} href="#">Sobre mí</A>
                         </li>
                         <li className="nav-item">
-                            <a className={`nav-link text-light ${active === 1 && 'active fw-bold'}`}
-                                onClick={() => setActive(1)} href="#">Formación y experiencia</a>
+                            <A className={`nav-link text-light ${active === 1 && 'fw-bold'}`}
+                                onClick={() => setActive(1)} href="#">Formación y experiencia</A>
                         </li>
                         <li className="nav-item">
-                            <a className={`nav-link text-light ${active === 2 && 'active fw-bold'}`}
-                                onClick={() => setActive(2)} href="#">Aptitudes</a>
+                            <A className={`nav-link text-light ${active === 2 && 'fw-bold'}`}
+                                onClick={() => setActive(2)} href="#">Aptitudes</A>
                         </li>
                         <li className="nav-item">
-                            <a className={`nav-link text-light ${active === 3 && 'active fw-bold'}`}
-                                onClick={() => setActive(3)} href="#">Proyectos</a>
+                            <A className={`nav-link text-light ${active === 3 && 'fw-bold'}`}
+                                onClick={() => setActive(3)} href="#">Proyectos</A>
                         </li>
                     </ul>
                 </div>
