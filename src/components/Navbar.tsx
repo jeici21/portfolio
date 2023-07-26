@@ -1,9 +1,9 @@
 import { useState } from "react"
 import styled from "styled-components"
 
-const A = styled.a`
+const P = styled.p`
     &:hover {
-        color: silver !important;
+        color: silver;
     }
 `
 
@@ -21,20 +21,28 @@ const Navbar = () => {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         <li className="nav-item">
-                            <A className={`nav-link text-light ${active === 0 && 'fw-bold'}`}
-                                onClick={() => setActive(0)} href="#">Sobre mí</A>
+                            <a className={`nav-link text-light ${active === 0 && 'fw-bold'}`}
+                                onClick={() => setActive(0)} href="#">
+                                <P>Sobre mí</P>
+                            </a>
                         </li>
                         <li className="nav-item">
-                            <A className={`nav-link text-light ${active === 1 && 'fw-bold'}`}
-                                onClick={() => setActive(1)} href="#">Formación y experiencia</A>
+                            <a className={`nav-link text-light ${active === 1 && 'fw-bold'}`}
+                                onClick={() => setActive(1)} href="#">
+                                <P>Formación y experiencia</P>
+                            </a>
                         </li>
                         <li className="nav-item">
-                            <A className={`nav-link text-light ${active === 2 && 'fw-bold'}`}
-                                onClick={() => setActive(2)} href="#">Aptitudes</A>
+                            <a className={`nav-link text-light ${active === 2 && 'fw-bold'}`}
+                                onClick={() => setActive(2)} href="#">
+                                <P>Aptitudes</P>
+                            </a>
                         </li>
                         <li className="nav-item">
-                            <A className={`nav-link text-light ${active === 3 && 'fw-bold'}`}
-                                onClick={() => setActive(3)} href="#">Proyectos</A>
+                            <a className={`nav-link text-light ${active === 3 && 'fw-bold'}`}
+                                onClick={() => setActive(3)} href="#">
+                                <P>Proyectos</P>
+                            </a>
                         </li>
                     </ul>
                 </div>
