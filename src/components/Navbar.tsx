@@ -1,7 +1,7 @@
 import { useState } from "react"
 import styled from "styled-components"
 
-const P = styled.p`
+const Span = styled.span`
     &:hover {
         color: silver;
     }
@@ -23,25 +23,25 @@ const Navbar = () => {
                         <li className="nav-item">
                             <a className={`nav-link text-light ${active === 0 && 'fw-bold'}`}
                                 onClick={() => setActive(0)} href="#">
-                                <P>Sobre mí</P>
+                                <Span>Sobre mí</Span>
                             </a>
                         </li>
                         <li className="nav-item">
                             <a className={`nav-link text-light ${active === 1 && 'fw-bold'}`}
                                 onClick={() => setActive(1)} href="#">
-                                <P>Formación y experiencia</P>
+                                <Span>Formación y experiencia</Span>
                             </a>
                         </li>
                         <li className="nav-item">
                             <a className={`nav-link text-light ${active === 2 && 'fw-bold'}`}
                                 onClick={() => setActive(2)} href="#">
-                                <P>Aptitudes</P>
+                                <Span>Aptitudes</Span>
                             </a>
                         </li>
                         <li className="nav-item">
                             <a className={`nav-link text-light ${active === 3 && 'fw-bold'}`}
                                 onClick={() => setActive(3)} href="#">
-                                <P>Proyectos</P>
+                                <Span>Proyectos</Span>
                             </a>
                         </li>
                     </ul>
