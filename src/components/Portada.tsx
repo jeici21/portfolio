@@ -1,16 +1,16 @@
 import styled from 'styled-components'
 import fondo from '../assets/fondo.jpg'
-import yo from '../assets/yo.jpg'
+import yo from '../assets/yo.jpeg'
 
 const Div = styled.div`
-    background: url(${fondo}) 100%;
+    background: url(${fondo}) fixed;
 `
 
 const Portada = () => {
     return (
         <div className='container-fluid'>
             <div className="row">
-                <Div className="col-9 text-white">
+                <Div className="col-9 text-white d-flex flex-column align-items-start justify-content-end">
                     <p>HOLA, SOY</p>
                     <h1>Jorge Castro</h1>
                     <p>Ingeniero en Sistemas Computacionales</p>
