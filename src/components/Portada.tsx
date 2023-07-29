@@ -3,17 +3,19 @@ import fondo from '../assets/fondo.jpg'
 import yo from '../assets/yo.jpeg'
 
 const Div = styled.div`
-    background: url(${fondo}) fixed;
-`
+    background: linear-gradient(rgba(1, 33, 82, 0.5), rgba(1, 33, 82, 0.5)), url(${fondo}) fixed;
+`;
 
 const Portada = () => {
     return (
         <div className='container-fluid'>
             <div className="row">
-                <Div className="col-9 text-white d-flex flex-column align-items-start justify-content-end">
-                    <p>HOLA, SOY</p>
-                    <h1>Jorge Castro</h1>
-                    <p>Ingeniero en Sistemas Computacionales</p>
+                <Div className='col-9 text-white d-flex flex-column align-items-center justify-content-end position-relative'>
+                    <div className='z-1 position-relative'>
+                        <p>HOLA, SOY</p>
+                        <h1 className='fw-bold'>Jorge Castro.</h1>
+                        <p className='fst-italic'>Ingeniero en Sistemas Computacionales</p>
+                    </div>
                 </Div>
                 <div className="col text-bg-primary text-center">
                     <img src={yo} alt="Yo" width="150" height='150' className='rounded-circle' />
