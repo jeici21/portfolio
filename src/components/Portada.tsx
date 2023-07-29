@@ -31,7 +31,7 @@ const Portada = () => {
                         <a href="https://twitter.com/cijei21" target='_blank' className='col bi bi-twitter text-white' />
                         <a href="https://github.com/jeici21" target='_blank' className='col bi bi-github text-white' />
                     </div>
-                    <button className='btn btn-light btn-lg my-5'>Descargar CV</button>
+                    <button className='btn btn-light btn-lg my-5 rounded-0'>Descargar CV</button>
                 </div>
             </div>
         </div>
