@@ -13,7 +13,7 @@ const Portada = () => {
                 <Div className='col-9 text-white d-flex flex-column align-items-center justify-content-end position-relative'>
                     <div className='z-1 position-relative'>
                         <p>HOLA, SOY</p>
-                        <h1 className='fw-bold'>Jorge Castro.</h1>
+                        <h1 className='fw-bold'>Jorge Castro</h1>
                         <p className='fst-italic'>Ingeniero en Sistemas Computacionales</p>
                     </div>
                 </Div>
@@ -24,7 +24,7 @@ const Portada = () => {
                     <a href="mailto:david92_jc@yahoo.es" className='link-light link-underline-opacity-0 link-underline-opacity-100-hover'>
                         david92_jc@yahoo.es
                     </a>
-                    <p>Tel: 914-123-456</p>
+                    <p>Tel: +593997543298</p>
                     <div className='row px-5 fs-5'>
                         <a href="https://www.linkedin.com/in/jorge-castro-vargas-7242a8129/" target='_blank' className='col bi bi-linkedin text-white' />
                         <a href="https://www.facebook.com/jeici21/" target='_blank' className='col bi bi-facebook text-white' />
