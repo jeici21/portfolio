@@ -7,11 +7,11 @@ const Span = styled.span`
     }
 `
 
-const Navbar = () => {
+const Navbar = ({ id, scroll }: { id: string, scroll: string[] }) => {
     const [active, setActive] = useState(0)
 
     return (
-        <nav className="navbar navbar-expand-sm bg-primary">
+        <nav className="navbar navbar-expand-sm bg-primary" id={id}>
             <div className="container-fluid">
                 <button className="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -22,25 +22,25 @@ const Navbar = () => {
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0 fst-italic">
                         <li className="nav-item ps-5">
                             <a className={`nav-link text-light ${active === 0 && 'fw-bold'}`}
-                                onClick={() => setActive(0)} href="#">
+                                onClick={() => setActive(0)} href={`#${scroll[0]}`}>
                                 <Span>Sobre mí</Span>
                             </a>
                         </li>
                         <li className="nav-item ps-5">
                             <a className={`nav-link text-light ${active === 1 && 'fw-bold'}`}
-                                onClick={() => setActive(1)} href="#">
+                                onClick={() => setActive(1)} href={`#${scroll[1]}`}>
                                 <Span>Formación y experiencia</Span>
                             </a>
                         </li>
                         <li className="nav-item ps-5">
                             <a className={`nav-link text-light ${active === 2 && 'fw-bold'}`}
-                                onClick={() => setActive(2)} href="#">
+                                onClick={() => setActive(2)} href={`#${scroll[2]}`}>
                                 <Span>Aptitudes</Span>
                             </a>
                         </li>
                         <li className="nav-item ps-5">
                             <a className={`nav-link text-light ${active === 3 && 'fw-bold'}`}
-                                onClick={() => setActive(3)} href="#">
+                                onClick={() => setActive(3)} href={`#${scroll[3]}`}>
                                 <Span>Proyectos</Span>
                             </a>
                         </li>

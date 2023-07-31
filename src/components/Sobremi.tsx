@@ -1,7 +1,7 @@
-const SobreMi = () => {
+const SobreMi = ({ id, scroll }: { id: string, scroll: string }) => {
     return (
-        <div className="bg-primary bg-opacity-10">
-            <div className="container">
+        <div className="bg-primary bg-opacity-10" data-bs-spy="scroll" data-bs-target={`#${id}`}>
+            <div className="container" id={scroll}>
                 <h2 className="fst-italic text-primary">Sobre mí</h2>
                 <p className="text-primary">MI PERFIL</p>
                 <h4>Me apasionan los negocios, las redes sociales y el marketing, y poseo las aptitudes y
