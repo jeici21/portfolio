@@ -6,16 +6,14 @@ import Proyectos from "./components/Proyectos"
 import SobreMi from "./components/Sobremi"
 
 function App() {
-  const scroll = ["sobre-mi", "formacion-y-experiencia", "aptitudes", "proyectos"]
-
   return (
     <>
-      <Navbar scroll={scroll} />
+      <Navbar />
       <Portada />
-      <SobreMi scroll={scroll[0]} />
-      <FormaciónYExp scroll={scroll[1]} />
-      <Aptitudes scroll={scroll[2]} />
-      <Proyectos scroll={scroll[3]} />
+      <SobreMi />
+      <FormaciónYExp />
+      <Aptitudes />
+      <Proyectos />
     </>
   )
 }

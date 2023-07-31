@@ -1,8 +1,6 @@
-const Aptitudes = ({ scroll }: { scroll: string }) => {
+const Aptitudes = () => {
     return (
-        <div data-bs-spy="scroll" data-bs-target="navbar" data-bs-smooth-scroll="true">
-            <div id={scroll}>Aptitudes</div>
-        </div>
+        <div id="aptitudes">Aptitudes</div>
     )
 }
 

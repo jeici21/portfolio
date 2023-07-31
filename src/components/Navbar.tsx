@@ -7,7 +7,7 @@ const Span = styled.span`
     }
 `
 
-const Navbar = ({ scroll }: { scroll: string[] }) => {
+const Navbar = () => {
     const [active, setActive] = useState(0)
 
     return (
@@ -22,25 +22,25 @@ const Navbar = ({ scroll }: { scroll: string[] }) => {
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0 fst-italic">
                         <li className="nav-item ps-5">
                             <a className={`nav-link text-light ${active === 0 && 'fw-bold'}`}
-                                onClick={() => setActive(0)} href={`#${scroll[0]}`}>
+                                onClick={() => setActive(0)} href="#sobre-mi">
                                 <Span>Sobre mí</Span>
                             </a>
                         </li>
                         <li className="nav-item ps-5">
                             <a className={`nav-link text-light ${active === 1 && 'fw-bold'}`}
-                                onClick={() => setActive(1)} href={`#${scroll[1]}`}>
+                                onClick={() => setActive(1)} href="#formacion-y-experiencia">
                                 <Span>Formación y experiencia</Span>
                             </a>
                         </li>
                         <li className="nav-item ps-5">
                             <a className={`nav-link text-light ${active === 2 && 'fw-bold'}`}
-                                onClick={() => setActive(2)} href={`#${scroll[2]}`}>
+                                onClick={() => setActive(2)} href="#aptitudes">
                                 <Span>Aptitudes</Span>
                             </a>
                         </li>
                         <li className="nav-item ps-5">
                             <a className={`nav-link text-light ${active === 3 && 'fw-bold'}`}
-                                onClick={() => setActive(3)} href={`#${scroll[3]}`}>
+                                onClick={() => setActive(3)} href="#proyectos">
                                 <Span>Proyectos</Span>
                             </a>
                         </li>

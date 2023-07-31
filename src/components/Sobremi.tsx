@@ -1,13 +1,13 @@
-const SobreMi = ({ scroll }: { scroll: string }) => {
+const SobreMi = () => {
     return (
-        <div className="bg-primary bg-opacity-10" data-bs-spy="scroll" data-bs-target="navbar" data-bs-smooth-scroll="true">
-            <div className="container" id={scroll}>
+        <div className="bg-primary bg-opacity-10">
+            <div className="container" id="sobre-mi">
                 <h2 className="fst-italic text-primary">Sobre mí</h2>
                 <p className="text-primary">MI PERFIL</p>
-                <h4>Me apasionan los negocios, las redes sociales y el marketing, y poseo las aptitudes y
-                    experiencia profesional necesarias para entrar en dicho mundo. Como profesional optimista,
-                    motivada y con excelentes habilidades comunicativas y de trabajo en equipo, espero un
-                    futuro brillante en esta industria. Explora mi sitio para ver lo que puedo aportar.</h4>
+                <h4>Me apasionan la programación y el diseño de páginas web, y poseo las aptitudes y
+                    experiencia profesional necesarias para entrar en dicho mundo. Como un profesional 
+                    optimista con excelentes habilidades de trabajo en equipo, espero unfuturo brillante 
+                    en esta industria. Explora mi sitio para ver lo que puedo aportar.</h4>
             </div>
         </div>
     )
