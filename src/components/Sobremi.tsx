@@ -1,6 +1,6 @@
 const SobreMi = ({ scroll }: { scroll: string }) => {
     return (
-        <div className="bg-primary bg-opacity-10" data-bs-spy="scroll" data-bs-target="navbar">
+        <div className="bg-primary bg-opacity-10" data-bs-spy="scroll" data-bs-target="navbar" data-bs-smooth-scroll="true">
             <div className="container" id={scroll}>
                 <h2 className="fst-italic text-primary">Sobre mí</h2>
                 <p className="text-primary">MI PERFIL</p>
