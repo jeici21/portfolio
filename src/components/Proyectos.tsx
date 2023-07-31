@@ -1,6 +1,6 @@
-const Proyectos = ({ id, scroll }: { id: string, scroll: string }) => {
+const Proyectos = ({ scroll }: { scroll: string }) => {
     return (
-        <div data-bs-spy="scroll" data-bs-target={`#${id}`}>
+        <div data-bs-spy="scroll" data-bs-target="#navbar">
             <div id={scroll}>Proyectos</div>
         </div>
     )

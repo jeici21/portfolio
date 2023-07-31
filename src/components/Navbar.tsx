@@ -7,11 +7,11 @@ const Span = styled.span`
     }
 `
 
-const Navbar = ({ id, scroll }: { id: string, scroll: string[] }) => {
+const Navbar = ({ scroll }: { scroll: string[] }) => {
     const [active, setActive] = useState(0)
 
     return (
-        <nav className="navbar navbar-expand-sm bg-primary" id={id}>
+        <nav className="navbar navbar-expand-sm bg-primary">
             <div className="container-fluid">
                 <button className="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
