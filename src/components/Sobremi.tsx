@@ -1,8 +1,8 @@
 const SobreMi = () => {
     return (
         <>
-            <div className="bg-primary bg-opacity-10 pt-5">
-                <div className="container" id="sobre-mi">
+            <div className="bg-primary bg-opacity-10 pt-5" id="sobre-mi">
+                <div className="container">
                     <h2 className="fst-italic text-primary">Sobre mí</h2>
                     <p className="text-primary">MI PERFIL</p>
                     <h4 className="py-5">Me apasionan la programación y el diseño de páginas web, y poseo las aptitudes y
