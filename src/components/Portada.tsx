@@ -7,6 +7,13 @@ const Div = styled.div`
 `;
 
 const Portada = () => {
+    const handleDownloadCV = () => {
+        const downloadLink = document.createElement('a');
+        downloadLink.href = '/Jorge_Castro_Vargas.pdf';
+        downloadLink.download = 'Jorge Castro Vargas.pdf';
+        downloadLink.click();
+    };
+
     return (
         <div className='container-fluid'>
             <div className="row">
@@ -31,7 +38,9 @@ const Portada = () => {
                         <a href="https://twitter.com/cijei21" target='_blank' className='col bi bi-twitter text-white' />
                         <a href="https://github.com/jeici21" target='_blank' className='col bi bi-github text-white' />
                     </div>
-                    <button className='btn btn-light btn-lg my-5 rounded-0'>Descargar CV</button>
+                    <button onClick={handleDownloadCV} className='btn btn-light btn-lg my-5 rounded-0'>
+                        Descargar CV
+                    </button>
                 </div>
             </div>
         </div>
