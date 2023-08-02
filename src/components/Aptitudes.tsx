@@ -1,11 +1,17 @@
+import { styled } from "styled-components"
+
+const Div = styled.div<{ width: number }>`
+    width: ${props => props.width}%;
+`
+
 const Aptitudes = () => {
     const aptitudes = [
         { nombre: 'Análisis de datos', valor: 50 },
         { nombre: 'Redacción de contenidos', valor: 75 },
-        { nombre: 'HTML y CSS', valor: 100 },
-        { nombre: 'Javascript', valor: 100 },
-        { nombre: 'Typescript', valor: 75 },
-        { nombre: 'React', valor: 75 },
+        { nombre: 'HTML y CSS', valor: 90 },
+        { nombre: 'Javascript', valor: 90 },
+        { nombre: 'Typescript', valor: 80 },
+        { nombre: 'React', valor: 80 },
         { nombre: 'Nodejs', valor: 75 },
         { nombre: 'Vue', valor: 50 },
     ]
@@ -22,7 +28,7 @@ const Aptitudes = () => {
                             <td className="col">
                                 <div className="progress" role="progressbar" aria-label={aptitud.nombre}
                                     aria-valuenow={aptitud.valor} aria-valuemin={0} aria-valuemax={100}>
-                                    <div className={`progress-bar progress-bar-striped progress-bar-animated w-${aptitud.valor}`} />
+                                    <Div width={aptitud.valor} className='progress-bar progress-bar-striped progress-bar-animated' />
                                 </div>
                             </td>
                         </tr>
