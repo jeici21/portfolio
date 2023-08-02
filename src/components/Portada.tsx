@@ -27,8 +27,8 @@ const Portada = () => {
                     </a>
                     <p>Tel: +593997543298</p>
                     <div className='row px-5 fs-5'>
-                        <a href="https://www.linkedin.com/in/jorge-castro-vargas-7242a8129/"
-                            rel="noopener noreferrer" target='_blank' className='col bi bi-linkedin text-white' />
+                        <a href="https://www.linkedin.com/in/jorge-castro-vargas-7242a8129/" target='_blank'
+                            rel="noopener noreferrer" className='col bi bi-linkedin text-white' />
                         <a href="https://www.facebook.com/jeici21/" target='_blank'
                             rel="noopener noreferrer" className='col bi bi-facebook text-white' />
                         <a href="https://twitter.com/cijei21" target='_blank'
