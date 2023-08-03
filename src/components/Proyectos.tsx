@@ -3,7 +3,7 @@ const Proyectos = () => {
         img: "https://raw.githubusercontent.com/jeici21/proyecto-final/ProductPage/src/KMarket.png",
         titulo: 'KMarket Ecommerce',
         descripcion: 'Un sitio web para un supermercado con funciones de agregar, modificar y eliminar productos junto a sus respectivas categorías. También es posible revisar más detalles sobre los productos y agregarlos al carrito de compras.',
-        repositorio: 'https://github.com/jeici21/proyecto-final',
+        repo: 'https://github.com/jeici21/proyecto-final',
         link: ''
     }]
 
@@ -19,7 +19,7 @@ const Proyectos = () => {
                             <div className="card-body">
                                 <h5 className="card-title">{proyecto.titulo}</h5>
                                 <p className="card-text">{proyecto.descripcion}</p>
-                                {proyecto.repositorio && <a href={proyecto.repositorio} className="btn btn-success mx-1" target="_blank">
+                                {proyecto.repo && <a href={proyecto.repo} className="btn btn-success mx-1" target="_blank">
                                     Ver repositorio
                                 </a>}
                                 {proyecto.link && <a href={proyecto.link} className="btn btn-danger mx-1" target="_blank">
