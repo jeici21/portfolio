@@ -1,9 +1,3 @@
-import { styled } from "styled-components"
-
-const Img = styled.img`
-    height: 180px;
-`
-
 const Proyectos = () => {
     const proyectos = [{
         img: "https://raw.githubusercontent.com/jeici21/proyecto-final/ProductPage/src/KMarket.png",
@@ -27,7 +21,7 @@ const Proyectos = () => {
                 {proyectos.map((proyecto, index) => (
                     <div className="col" key={index}>
                         <div className="card">
-                            <Img src={proyecto.img} className="card-img-top" alt="K-Market E-commerce" />
+                            <img src={proyecto.img} className="card-img-top" alt="K-Market E-commerce" height="180" />
                             <div className="card-body">
                                 <h5 className="card-title">{proyecto.titulo}</h5>
                                 <p className="card-text">{proyecto.descripcion}</p>

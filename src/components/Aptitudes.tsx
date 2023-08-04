@@ -6,25 +6,27 @@ const Div = styled.div<{ width: number }>`
 
 const Aptitudes = () => {
     const aptitudes = [
-        { nombre: 'Análisis de datos', valor: 50 },
-        { nombre: 'Redacción de contenidos', valor: 75 },
-        { nombre: 'HTML y CSS', valor: 90 },
-        { nombre: 'Javascript', valor: 90 },
-        { nombre: 'Typescript', valor: 80 },
-        { nombre: 'React', valor: 80 },
-        { nombre: 'Nodejs', valor: 75 },
-        { nombre: 'Vue', valor: 50 },
+        { icono: "https://img.icons8.com/?size=1x&id=20909&format=png", nombre: 'HTML', valor: 90 },
+        { icono: "https://img.icons8.com/?size=1x&id=21278&format=png", nombre: 'CSS', valor: 90 },
+        { icono: "https://img.icons8.com/?size=1x&id=108784&format=png", nombre: 'Javascript', valor: 90 },
+        { icono: "https://img.icons8.com/?size=1x&id=uJM6fQYqDaZK&format=png", nombre: 'Typescript', valor: 80 },
+        { icono: "https://img.icons8.com/?size=1x&id=123603&format=png", nombre: 'React', valor: 80 },
+        { icono: "https://img.icons8.com/?size=1x&id=hsPbhkOH4FMe&format=png", nombre: 'Nodejs', valor: 75 },
+        { icono: "https://img.icons8.com/?size=1x&id=kg46nzoJrmTR&format=png", nombre: 'Express', valor: 75 },
+        { icono: "https://img.icons8.com/?size=1x&id=rY6agKizO9eb&format=png", nombre: 'Vue', valor: 50 },
     ]
 
     return (
         <div id="aptitudes" className="container pt-5">
-            <h2 className="fst-italic text-primary">Aptitudes</h2>
-            <p className="text-primary">LO QUE PUEDO APORTAR</p>
+            <h2 className="fst-italic text-primary text-center">Aptitudes</h2>
+            <p className="text-primary text-center">LO QUE PUEDO APORTAR</p>
             <table className="table table-borderless">
                 <tbody>
                     {aptitudes.map((aptitud, index) => (
                         <tr key={index}>
-                            <td className="col-4">{aptitud.nombre}</td>
+                            <td className="col-4">
+                                <img src={aptitud.icono} alt="Icono" width="30" height="30" /> {aptitud.nombre}
+                            </td>
                             <td className="col">
                                 <div className="progress" role="progressbar" aria-label={aptitud.nombre}
                                     aria-valuenow={aptitud.valor} aria-valuemin={0} aria-valuemax={100}>
