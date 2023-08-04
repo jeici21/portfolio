@@ -15,14 +15,14 @@ const Portada = () => {
     return (
         <div className='container-fluid'>
             <div className="row">
-                <Div className='col-9 text-white d-flex flex-column align-items-center justify-content-end position-relative'>
+                <Div className='col-md-9 text-white d-flex flex-column align-items-center justify-content-end position-relative pt-5 pt-md-0'>
                     <div className='z-1 position-relative'>
                         <p className='fs-5'>HOLA, SOY</p>
                         <H1 className='fw-bold'>Jorge Castro</H1>
                         <h5 className='fst-italic'>Ingeniero en Sistemas Computacionales</h5>
                     </div>
                 </Div>
-                <div className="col text-bg-primary text-center">
+                <div className="col-md-3 text-bg-primary text-center pt-5 pt-md-0">
                     <img src={yo} alt="Yo" width="150" height='150' className='rounded-circle' />
                     <h1 className='fw-bold pt-5'>Jorge Castro</h1>
                     <p className='py-4'>Ingeniero en Sistemas Computacionales. <br />Universidad Estatal de Milagro</p>

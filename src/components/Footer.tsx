@@ -6,9 +6,9 @@ const Footer = () => {
             <div className="bg-primary bg-opacity-10 py-5">
                 <div className="container">
                     <div className="row">
-                        <div className="col-6">
+                        <div className="col-md-6 text-center">
                             <h2 className="fst-italic text-primary">Mis redes sociales</h2>
-                            <div className='d-flex flex-row column-gap-4 fs-5 pt-5'>
+                            <div className='d-flex flex-row justify-content-center column-gap-4 fs-5 pt-5'>
                                 <a href="https://www.linkedin.com/in/jorge-castro-vargas-7242a8129/" target='_blank'
                                     rel="noopener noreferrer" className='bi bi-linkedin text-black' />
                                 <a href="https://www.facebook.com/jeici21/" target='_blank'
@@ -19,7 +19,7 @@ const Footer = () => {
                                     rel="noopener noreferrer" className='bi bi-github text-black' />
                             </div>
                         </div>
-                        <div className="col">
+                        <div className="col-md-6 text-center pt-5 pt-md-0">
                             <a href="mailto:david92_jc@yahoo.es" className='link-dark link-underline-opacity-0 link-underline-opacity-100-hover'>
                                 david92_jc@yahoo.es
                             </a>

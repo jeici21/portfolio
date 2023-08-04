@@ -2,9 +2,9 @@ const FormaciónYExp = () => {
     return (
         <div id="formacion-y-experiencia" className="container pt-5">
             <div className="row">
-                <div className="col">
-                    <h2 className="fst-italic text-primary">Formación</h2>
-                    <p className="text-primary">MIS CONOCIMIENTOS</p>
+                <div className="col-md-6">
+                    <h2 className="fst-italic text-primary text-center text-md-start">Formación</h2>
+                    <p className="text-primary text-center text-md-start">MIS CONOCIMIENTOS</p>
                     <p className="pt-5 fw-bold">2004 - 2010</p>
                     <p>Graduado en la especialidad de Informática</p>
                     <p>Colegio Fiscal Econ. Abdón Calderón Muñoz</p>
@@ -12,9 +12,9 @@ const FormaciónYExp = () => {
                     <p>Graduado con el título de Ingeniero en Sistemas Computacionales</p>
                     <p>Universidad Estatal de Milagro</p>
                 </div>
-                <div className="col">
-                    <h2 className="fst-italic text-primary">Experiencia</h2>
-                    <p className="text-primary">TRAYECTORIA PROFESIONAL</p>
+                <div className="col-md-6 pt-5 pt-md-0">
+                    <h2 className="fst-italic text-primary text-center text-md-start">Experiencia</h2>
+                    <p className="text-primary text-center text-md-start">TRAYECTORIA PROFESIONAL</p>
                     <p className="pt-5 fw-bold">Junio 2023 - Actualidad</p>
                     <p>EICHE, Web Developer Vue-React</p>
                     <p className="pt-5 fw-bold">Noviembre 2022 - Febrero 2023</p>

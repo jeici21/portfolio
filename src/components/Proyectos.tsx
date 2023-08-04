@@ -17,9 +17,9 @@ const Proyectos = () => {
         <div id="proyectos" className="container text-center py-5">
             <h2 className="fst-italic text-primary">Proyectos</h2>
             <p className="text-primary">MIS TRABAJOS HASTA EL MOMENTO</p>
-            <div className="row row-cols-3">
+            <div className="row row-gap-2">
                 {proyectos.map((proyecto, index) => (
-                    <div className="col" key={index}>
+                    <div className="col-md-6 col-lg-4" key={index}>
                         <div className="card">
                             <img src={proyecto.img} className="card-img-top" alt="K-Market E-commerce" height="180" />
                             <div className="card-body">
