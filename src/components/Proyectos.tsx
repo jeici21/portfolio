@@ -2,7 +2,7 @@ const Proyectos = () => {
     const proyectos = [{
         img: "https://raw.githubusercontent.com/jeici21/proyecto-final/ProductPage/src/KMarket.png",
         titulo: 'KMarket Ecommerce',
-        descripcion: 'Un sitio web para un supermercado con funciones de agregar, modificar y eliminar productos junto a sus respectivas categorías.',
+        descripcion: 'Un sitio web de un supermercado con funciones CRUD de productos junto a sus respectivas categorías.',
         repo: 'https://github.com/jeici21/proyecto-final',
         link: 'https://k-market-ten.vercel.app/'
     }, {
@@ -23,7 +23,7 @@ const Proyectos = () => {
                         <div className="card">
                             <img src={proyecto.img} className="card-img-top" alt="K-Market E-commerce" height="180" />
                             <div className="card-body">
-                                <h5 className="card-title">{proyecto.titulo}</h5>
+                                <p className="card-title fw-bold">{proyecto.titulo}</p>
                                 <p className="card-text">{proyecto.descripcion}</p>
                                 {proyecto.repo && <a href={proyecto.repo} className="btn btn-success mx-1" target="_blank">
                                     Ver repositorio

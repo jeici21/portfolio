@@ -1,0 +1,11 @@
+body {
+    font-family: 'Century Gothic', Garamond, 'Gill Sans Nova', sans-serif;
+}
+
+nav a, h5, h2, footer {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h1 {
+    font-family: Elephant, Britannic, sans-serif;
+}

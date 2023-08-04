@@ -15,12 +15,12 @@ const Portada = () => {
                     <div className='z-1 position-relative'>
                         <p>HOLA, SOY</p>
                         <h1 className='fw-bold'>Jorge Castro</h1>
-                        <p className='fst-italic'>Ingeniero en Sistemas Computacionales</p>
+                        <h5 className='fst-italic'>Ingeniero en Sistemas Computacionales</h5>
                     </div>
                 </Div>
                 <div className="col text-bg-primary text-center">
                     <img src={yo} alt="Yo" width="150" height='150' className='rounded-circle' />
-                    <h1 className='fw-bold'>Jorge Castro</h1>
+                    <h1 className='fw-bold pt-5'>Jorge Castro</h1>
                     <p className='py-4'>Ingeniero en Sistemas Computacionales. <br />Universidad Estatal de Milagro</p>
                     <a href="mailto:david92_jc@yahoo.es" className='link-light link-underline-opacity-0 link-underline-opacity-100-hover'>
                         david92_jc@yahoo.es

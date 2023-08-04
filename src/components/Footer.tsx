@@ -42,9 +42,9 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <div className="container-fluid bg-primary text-white fst-italic ps-5 py-4">
+            <footer className="container-fluid bg-primary text-white fst-italic ps-5 py-4">
                 © {new Date().getFullYear()} Diseñado por Jorge Castro Vargas.
-            </div>
+            </footer>
         </>
     )
 }
