@@ -1,6 +1,16 @@
+import { useEffect, useState } from 'react';
 import CV from '/Jorge_Castro_Vargas.pdf'
 
 const Footer = () => {
+    const [darkMode, setDarkMode] = useState(false)
+    
+    useEffect(() => {
+        const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+        setDarkMode(darkModeMediaQuery.matches);
+        darkModeMediaQuery.addEventListener('change', e => setDarkMode(e.matches));
+        return () => darkModeMediaQuery.removeEventListener('change', e => setDarkMode(e.matches));
+    }, []);
+    
     return (
         <>
             <div className="bg-primary bg-opacity-10 py-5">
@@ -21,7 +31,7 @@ const Footer = () => {
                         </div>
                         <div className="col-md-6 text-center pt-5 pt-md-0">
                             <a href="mailto:david92_jc@yahoo.es"
-                                className={`${window.matchMedia('(prefers-color-scheme: dark)').matches ? 'link-light' : 'link-dark'} link-underline-opacity-0 link-underline-opacity-100-hover`}>
+                                className={`${darkMode ? 'link-light' : 'link-dark'} link-underline-opacity-0 link-underline-opacity-100-hover`}>
                                 david92_jc@yahoo.es
                             </a>
                             <p>Tel: +593997543298</p>

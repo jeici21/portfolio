@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react"
 import { styled } from "styled-components"
 
 const Div = styled.div<{ width: number }>`
@@ -5,6 +6,8 @@ const Div = styled.div<{ width: number }>`
 `
 
 const Aptitudes = () => {
+    const [darkMode, setDarkMode] = useState(false)
+
     const aptitudes = [
         { icono: "https://img.icons8.com/?size=1x&id=20909&format=png", nombre: 'HTML', valor: 90 },
         { icono: "https://img.icons8.com/?size=1x&id=21278&format=png", nombre: 'CSS', valor: 90 },
@@ -16,11 +19,18 @@ const Aptitudes = () => {
         { icono: "https://img.icons8.com/?size=1x&id=rY6agKizO9eb&format=png", nombre: 'Vue', valor: 50 },
     ]
 
+    useEffect(() => {
+        const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+        setDarkMode(darkModeMediaQuery.matches);
+        darkModeMediaQuery.addEventListener('change', e => setDarkMode(e.matches));
+        return () => darkModeMediaQuery.removeEventListener('change', e => setDarkMode(e.matches));
+    }, []);
+
     return (
         <div id="aptitudes" className="container pt-5">
             <h2 className="fst-italic text-primary text-center">Aptitudes</h2>
             <p className="text-primary text-center">LO QUE PUEDO APORTAR</p>
-            <table className={`table table-borderless ${window.matchMedia('(prefers-color-scheme: dark)').matches && 'table-dark'}`}>
+            <table className={`table table-borderless ${darkMode && 'table-dark'}`}>
                 <tbody>
                     {aptitudes.map((aptitud, index) => (
                         <tr key={index}>

@@ -1,4 +1,8 @@
+import { useEffect, useState } from "react";
+
 const Proyectos = () => {
+    const [darkMode, setDarkMode] = useState(false)
+
     const proyectos = [{
         img: "https://raw.githubusercontent.com/jeici21/proyecto-final/ProductPage/src/KMarket.png",
         titulo: 'KMarket Ecommerce',
@@ -13,6 +17,13 @@ const Proyectos = () => {
         link: 'https://kruger-grupal-project.vercel.app/'
     }]
 
+    useEffect(() => {
+        const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+        setDarkMode(darkModeMediaQuery.matches);
+        darkModeMediaQuery.addEventListener('change', e => setDarkMode(e.matches));
+        return () => darkModeMediaQuery.removeEventListener('change', e => setDarkMode(e.matches));
+    }, []);
+
     return (
         <div id="proyectos" className="container text-center py-5">
             <h2 className="fst-italic text-primary">Proyectos</h2>
@@ -20,7 +31,7 @@ const Proyectos = () => {
             <div className="row row-gap-2">
                 {proyectos.map((proyecto, index) => (
                     <div className="col-md-6 col-lg-4" key={index}>
-                        <div className={`card ${window.matchMedia('(prefers-color-scheme: dark)').matches ? 'text-bg-dark border-light' : 'text-bg-light'}`}>
+                        <div className={`card ${darkMode && 'text-bg-dark border-light'}`}>
                             <img src={proyecto.img} className="card-img-top" alt="K-Market E-commerce" height={180} />
                             <div className="card-body">
                                 <p className="card-title fw-bold">{proyecto.titulo}</p>
