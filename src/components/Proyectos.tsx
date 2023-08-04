@@ -14,7 +14,7 @@ const Proyectos = () => {
     }]
 
     return (
-        <div id="proyectos" className="container text-center pt-5">
+        <div id="proyectos" className="container text-center py-5">
             <h2 className="fst-italic text-primary">Proyectos</h2>
             <p className="text-primary">MIS TRABAJOS HASTA EL MOMENTO</p>
             <div className="row row-cols-3">

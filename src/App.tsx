@@ -1,4 +1,5 @@
 import Aptitudes from "./components/Aptitudes"
+import Footer from "./components/Footer"
 import FormaciónYExp from "./components/FormaciónYExp"
 import Navbar from "./components/Navbar"
 import Portada from "./components/Portada"
@@ -14,6 +15,7 @@ function App() {
       <FormaciónYExp />
       <Aptitudes />
       <Proyectos />
+      <Footer />
     </>
   )
 }
