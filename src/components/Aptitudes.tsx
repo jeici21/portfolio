@@ -20,12 +20,12 @@ const Aptitudes = () => {
         <div id="aptitudes" className="container pt-5">
             <h2 className="fst-italic text-primary text-center">Aptitudes</h2>
             <p className="text-primary text-center">LO QUE PUEDO APORTAR</p>
-            <table className="table table-borderless">
+            <table className={`table table-borderless ${window.matchMedia('(prefers-color-scheme: dark)').matches && 'table-dark'}`}>
                 <tbody>
                     {aptitudes.map((aptitud, index) => (
                         <tr key={index}>
                             <td className="col-4">
-                                <img src={aptitud.icono} alt="Icono" width="30" height="30" /> {aptitud.nombre}
+                                <img src={aptitud.icono} alt="Icono" width={30} height={30} /> {aptitud.nombre}
                             </td>
                             <td className="col">
                                 <div className="progress" role="progressbar" aria-label={aptitud.nombre}

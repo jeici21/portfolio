@@ -10,17 +10,18 @@ const Footer = () => {
                             <h2 className="fst-italic text-primary">Mis redes sociales</h2>
                             <div className='d-flex flex-row justify-content-center column-gap-4 fs-5 pt-5'>
                                 <a href="https://www.linkedin.com/in/jorge-castro-vargas-7242a8129/" target='_blank'
-                                    rel="noopener noreferrer" className='bi bi-linkedin text-black' />
+                                    rel="noopener noreferrer" className='bi bi-linkedin' />
                                 <a href="https://www.facebook.com/jeici21/" target='_blank'
-                                    rel="noopener noreferrer" className='bi bi-facebook text-black' />
+                                    rel="noopener noreferrer" className='bi bi-facebook' />
                                 <a href="https://twitter.com/cijei21" target='_blank'
-                                    rel="noopener noreferrer" className='bi bi-twitter text-black' />
+                                    rel="noopener noreferrer" className='bi bi-twitter' />
                                 <a href="https://github.com/jeici21" target='_blank'
-                                    rel="noopener noreferrer" className='bi bi-github text-black' />
+                                    rel="noopener noreferrer" className='bi bi-github' />
                             </div>
                         </div>
                         <div className="col-md-6 text-center pt-5 pt-md-0">
-                            <a href="mailto:david92_jc@yahoo.es" className='link-dark link-underline-opacity-0 link-underline-opacity-100-hover'>
+                            <a href="mailto:david92_jc@yahoo.es"
+                                className={`${window.matchMedia('(prefers-color-scheme: dark)').matches ? 'link-light' : 'link-dark'} link-underline-opacity-0 link-underline-opacity-100-hover`}>
                                 david92_jc@yahoo.es
                             </a>
                             <p>Tel: +593997543298</p>

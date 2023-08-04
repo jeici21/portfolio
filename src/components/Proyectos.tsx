@@ -20,8 +20,8 @@ const Proyectos = () => {
             <div className="row row-gap-2">
                 {proyectos.map((proyecto, index) => (
                     <div className="col-md-6 col-lg-4" key={index}>
-                        <div className="card">
-                            <img src={proyecto.img} className="card-img-top" alt="K-Market E-commerce" height="180" />
+                        <div className={`card ${window.matchMedia('(prefers-color-scheme: dark)').matches ? 'text-bg-dark border-light' : 'text-bg-light'}`}>
+                            <img src={proyecto.img} className="card-img-top" alt="K-Market E-commerce" height={180} />
                             <div className="card-body">
                                 <p className="card-title fw-bold">{proyecto.titulo}</p>
                                 <p className="card-text">{proyecto.descripcion}</p>

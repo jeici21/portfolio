@@ -9,3 +9,10 @@ nav a, h5, h2, footer {
 h1 {
     font-family: Elephant, Britannic, sans-serif;
 }
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #212529;
+        color: white;
+    }
+}
