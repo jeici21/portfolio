@@ -7,14 +7,18 @@ const Div = styled.div`
     background: linear-gradient(rgba(1, 33, 82, 0.5), rgba(1, 33, 82, 0.5)), url(${fondo}) fixed;
 `;
 
+const H1 = styled.h1`
+    font-size: 5rem;
+`
+
 const Portada = () => {
     return (
         <div className='container-fluid'>
             <div className="row">
                 <Div className='col-9 text-white d-flex flex-column align-items-center justify-content-end position-relative'>
                     <div className='z-1 position-relative'>
-                        <p>HOLA, SOY</p>
-                        <h1 className='fw-bold'>Jorge Castro</h1>
+                        <p className='fs-5'>HOLA, SOY</p>
+                        <H1 className='fw-bold'>Jorge Castro</H1>
                         <h5 className='fst-italic'>Ingeniero en Sistemas Computacionales</h5>
                     </div>
                 </Div>
