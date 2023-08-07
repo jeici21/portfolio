@@ -5,9 +5,6 @@ const FormaciónYExp = () => {
                 <div className="col-md-6">
                     <h2 className="fst-italic text-primary text-center text-md-start">Formación</h2>
                     <p className="text-primary text-center text-md-start">MIS CONOCIMIENTOS</p>
-                    <p className="pt-5 fw-bold">2004 - 2010</p>
-                    <p>Graduado en la especialidad de Informática</p>
-                    <p>Colegio Fiscal Econ. Abdón Calderón Muñoz</p>
                     <p className="pt-5 fw-bold">2010 - 2016</p>
                     <p>Graduado con el título de Ingeniero en Sistemas Computacionales</p>
                     <p>Universidad Estatal de Milagro</p>
