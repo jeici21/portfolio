@@ -1,12 +1,22 @@
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { styled } from "styled-components"
 
-const Div = styled.div<{ width: number }>`
+const FadeInDiv = styled.div<{ visibility: string }>`
+    opacity: ${props => props.visibility === 'true' ? 1 : 0};
+    transform: ${props => props.visibility === 'true' ? 'none' : 'translateY(10vh)'};
+    visibility: ${props => props.visibility === 'true' ? 'visible' : 'hidden'};
+    transition: opacity 0.6s ease-out, transform 1.2s ease-out;
+    will-change: opacity, visibility;
+`
+
+const ProgressBarDiv = styled.div<{ width: number }>`
     width: ${props => props.width}%;
 `
 
 const Aptitudes = () => {
     const [darkMode, setDarkMode] = useState(false)
+    const [visible, setVisible] = useState(true)
+    const domRef = useRef<HTMLDivElement>(null)
 
     const aptitudes = [
         { icono: "https://img.icons8.com/?size=1x&id=20909&format=png", nombre: 'HTML', valor: 90 },
@@ -26,8 +36,16 @@ const Aptitudes = () => {
         return () => darkModeMediaQuery.removeEventListener('change', e => setDarkMode(e.matches));
     }, []);
 
+    useEffect(() => {
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => setVisible(entry.isIntersecting));
+        });
+        observer.observe(domRef.current!);
+        return () => observer.unobserve(domRef.current!);
+    }, [])
+
     return (
-        <div id="aptitudes" className="container pt-5">
+        <FadeInDiv visibility={String(visible)} id="aptitudes" className="container pt-5" ref={domRef}>
             <h2 className="fst-italic text-primary text-center">Aptitudes</h2>
             <p className="text-primary text-center">LO QUE PUEDO APORTAR</p>
             <table className={`table table-borderless ${darkMode && 'table-dark'}`}>
@@ -40,14 +58,14 @@ const Aptitudes = () => {
                             <td className="col">
                                 <div className="progress" role="progressbar" aria-label={aptitud.nombre}
                                     aria-valuenow={aptitud.valor} aria-valuemin={0} aria-valuemax={100}>
-                                    <Div width={aptitud.valor} className='progress-bar progress-bar-striped progress-bar-animated' />
+                                    <ProgressBarDiv width={aptitud.valor} className='progress-bar progress-bar-striped progress-bar-animated' />
                                 </div>
                             </td>
                         </tr>
                     ))}
                 </tbody>
             </table>
-        </div>
+        </FadeInDiv>
     )
 }
 

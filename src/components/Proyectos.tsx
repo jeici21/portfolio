@@ -1,7 +1,18 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { styled } from "styled-components";
+
+const Div = styled.div<{ visibility: string }>`
+    opacity: ${props => props.visibility === 'true' ? 1 : 0};
+    transform: ${props => props.visibility === 'true' ? 'none' : 'translateY(10vh)'};
+    visibility: ${props => props.visibility === 'true' ? 'visible' : 'hidden'};
+    transition: opacity 0.6s ease-out, transform 1.2s ease-out;
+    will-change: opacity, visibility;
+`
 
 const Proyectos = () => {
     const [darkMode, setDarkMode] = useState(false)
+    const [visible, setVisible] = useState(true)
+    const domRef = useRef<HTMLDivElement>(null)
 
     const proyectos = [{
         img: "https://raw.githubusercontent.com/jeici21/proyecto-final/ProductPage/src/KMarket.png",
@@ -24,8 +35,16 @@ const Proyectos = () => {
         return () => darkModeMediaQuery.removeEventListener('change', e => setDarkMode(e.matches));
     }, []);
 
+    useEffect(() => {
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => setVisible(entry.isIntersecting));
+        });
+        observer.observe(domRef.current!);
+        return () => observer.unobserve(domRef.current!);
+    }, [])
+
     return (
-        <div id="proyectos" className="container text-center py-5">
+        <Div visibility={String(visible)} id="proyectos" className="container text-center py-5" ref={domRef}>
             <h2 className="fst-italic text-primary">Proyectos</h2>
             <p className="text-primary">MIS TRABAJOS HASTA EL MOMENTO</p>
             <div className="row row-gap-2">
@@ -47,7 +66,7 @@ const Proyectos = () => {
                     </div>
                 ))}
             </div>
-        </div>
+        </Div>
     )
 }
 
