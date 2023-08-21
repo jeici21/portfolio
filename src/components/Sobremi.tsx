@@ -1,8 +1,30 @@
+import { useEffect, useRef, useState } from "react"
+import { styled } from "styled-components"
+
+const Div = styled.div<{ visibility: string }>`
+    opacity: ${props => props.visibility === 'true' ? 1 : 0};
+    transform: ${props => props.visibility === 'true' ? 'none' : 'translateY(10vh)' };
+    visibility: ${props => props.visibility === 'true' ? 'visible' : 'hidden' };
+    transition: opacity 0.6s ease-out, transform 1.2s ease-out;
+    will-change: opacity, visibility;
+`
+
 const SobreMi = () => {
+    const [visible, setVisible] = useState(true)
+    const domRef = useRef<HTMLDivElement>(null)
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => setVisible(entry.isIntersecting));
+        });
+        observer.observe(domRef.current!);
+        return () => observer.unobserve(domRef.current!);
+    }, [])
+
     return (
         <div className="bg-primary bg-opacity-10 pt-5" id="sobre-mi">
             <div className="container">
-                <div className="row">
+                <Div visibility={String(visible)} className="row" ref={domRef}>
                     <div className="col-md-6">
                         <h2 className="fst-italic text-primary text-center text-md-start">Sobre mí</h2>
                         <p className="text-primary text-center text-md-start">MI PERFIL</p>
@@ -22,7 +44,7 @@ const SobreMi = () => {
                             <p className="col">📖 Lectura</p>
                         </div>
                     </div>
-                </div>
+                </Div>
             </div>
         </div>
     )
