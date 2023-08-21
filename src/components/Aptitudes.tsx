@@ -16,7 +16,7 @@ const Aptitudes = () => {
         { icono: "https://img.icons8.com/?size=1x&id=123603&format=png", nombre: 'React', valor: 80 },
         { icono: "https://img.icons8.com/?size=1x&id=hsPbhkOH4FMe&format=png", nombre: 'Nodejs', valor: 75 },
         { icono: "https://img.icons8.com/?size=1x&id=kg46nzoJrmTR&format=png", nombre: 'Express', valor: 75 },
-        { icono: "https://img.icons8.com/?size=1x&id=rY6agKizO9eb&format=png", nombre: 'Vue', valor: 50 },
+        { icono: "https://img.icons8.com/?size=512&id=HKNzD81eiiSc&format=png", nombre: 'jQuery', valor: 70 },
     ]
 
     useEffect(() => {
