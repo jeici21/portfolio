@@ -47,7 +47,7 @@ const Proyectos = () => {
         <Div visibility={String(visible)} id="proyectos" className="container text-center py-5" ref={domRef}>
             <h2 className="fst-italic text-primary">Proyectos</h2>
             <p className="text-primary">MIS TRABAJOS HASTA EL MOMENTO</p>
-            <div className="row row-gap-2">
+            <div className="row row-gap-2 justify-content-center">
                 {proyectos.map((proyecto, index) => (
                     <div className="col-md-6 col-lg-4" key={index}>
                         <div className={`card ${darkMode && 'text-bg-dark border-light'}`}>
