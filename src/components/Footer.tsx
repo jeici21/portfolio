@@ -20,13 +20,13 @@ const Footer = () => {
                             <h2 className="fst-italic text-primary">Mis redes sociales</h2>
                             <div className='d-flex flex-row justify-content-center column-gap-4 fs-5 pt-5'>
                                 <a href="https://www.linkedin.com/in/jorge-castro-vargas-7242a8129/" target='_blank'
-                                    rel="noopener noreferrer" className='bi bi-linkedin' />
+                                    rel="noopener noreferrer" className='bi bi-linkedin' title="LinkedIn" />
                                 <a href="https://www.facebook.com/jeici21/" target='_blank'
-                                    rel="noopener noreferrer" className='bi bi-facebook' />
+                                    rel="noopener noreferrer" className='bi bi-facebook' title="Facebook" />
                                 <a href="https://twitter.com/cijei21" target='_blank'
-                                    rel="noopener noreferrer" className='bi bi-twitter' />
+                                    rel="noopener noreferrer" className='bi bi-twitter' title="Twitter" />
                                 <a href="https://github.com/jeici21" target='_blank'
-                                    rel="noopener noreferrer" className='bi bi-github' />
+                                    rel="noopener noreferrer" className='bi bi-github' title="GitHub" />
                             </div>
                         </div>
                         <div className="col-md-6 text-center pt-5 pt-md-0">
@@ -43,7 +43,7 @@ const Footer = () => {
                                     </button>
                                 </div>
                                 <div className='col-auto'>
-                                    <button onClick={() => window.scrollTo(0, 0)}
+                                    <button onClick={() => window.scrollTo(0, 0)} title='Volver al Inicio'
                                         className='btn btn-outline-primary border-2 rounded-circle'>
                                         <i className='bi bi-chevron-up' />
                                     </button>
