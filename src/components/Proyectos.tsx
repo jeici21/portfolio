@@ -2,9 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { styled } from "styled-components";
 
 const Div = styled.div<{ visibility: string }>`
-    opacity: ${props => props.visibility === 'true' ? 1 : 0};
     transform: ${props => props.visibility === 'true' ? 'none' : 'translateY(10vh)'};
-    visibility: ${props => props.visibility === 'true' ? 'visible' : 'hidden'};
     transition: opacity 0.6s ease-out, transform 1.2s ease-out;
     will-change: opacity, visibility;
 `
@@ -44,7 +42,8 @@ const Proyectos = () => {
     }, [])
 
     return (
-        <Div visibility={String(visible)} id="proyectos" className="container text-center py-5" ref={domRef}>
+        <Div visibility={String(visible)} id="proyectos" ref={domRef}
+            className={`container text-center py-5 ${visible ? 'opacity-100 visible' : 'opacity-0 invisible'}`}>
             <h2 className="fst-italic text-primary">Proyectos</h2>
             <p className="text-primary">MIS TRABAJOS HASTA EL MOMENTO</p>
             <div className="row row-gap-2 justify-content-center">

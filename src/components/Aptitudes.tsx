@@ -2,9 +2,7 @@ import { useEffect, useRef, useState } from "react"
 import { styled } from "styled-components"
 
 const FadeInDiv = styled.div<{ visibility: string }>`
-    opacity: ${props => props.visibility === 'true' ? 1 : 0};
     transform: ${props => props.visibility === 'true' ? 'none' : 'translateY(10vh)'};
-    visibility: ${props => props.visibility === 'true' ? 'visible' : 'hidden'};
     transition: opacity 0.6s ease-out, transform 1.2s ease-out;
     will-change: opacity, visibility;
 `
@@ -47,7 +45,8 @@ const Aptitudes = () => {
     }, [])
 
     return (
-        <FadeInDiv visibility={String(visible)} id="aptitudes" className="container pt-5" ref={domRef}>
+        <FadeInDiv visibility={String(visible)} id="aptitudes" ref={domRef}
+            className={`container pt-5 ${visible ? 'opacity-100 visible' : 'opacity-0 invisible'}`}>
             <h2 className="fst-italic text-primary text-center">Aptitudes</h2>
             <p className="text-primary text-center">LO QUE PUEDO APORTAR</p>
             <table className={`table table-borderless ${darkMode && 'table-dark'}`}>
