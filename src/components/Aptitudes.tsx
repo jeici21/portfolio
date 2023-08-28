@@ -11,8 +11,9 @@ const ProgressBarDiv = styled.div<{ width: number }>`
     width: ${props => props.width}%;
 `
 
-const Aptitudes = () => {
-    const [darkMode, setDarkMode] = useState(false)
+interface AptitudesProps { darkMode: boolean }
+
+const Aptitudes = ({ darkMode }: AptitudesProps) => {
     const [visible, setVisible] = useState(true)
     const domRef = useRef<HTMLDivElement>(null)
 
@@ -28,13 +29,6 @@ const Aptitudes = () => {
         { icono: "https://img.icons8.com/?size=512&id=84710&format=png", nombre: 'Bootstrap', valor: 90 },
         { icono: "https://img.icons8.com/?size=512&id=4PiNHtUJVbLs&format=png", nombre: 'Tailwind', valor: 75 },
     ]
-
-    useEffect(() => {
-        const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-        setDarkMode(darkModeMediaQuery.matches);
-        darkModeMediaQuery.addEventListener('change', e => setDarkMode(e.matches));
-        return () => darkModeMediaQuery.removeEventListener('change', e => setDarkMode(e.matches));
-    }, []);
 
     useEffect(() => {
         const observer = new IntersectionObserver(entries => {

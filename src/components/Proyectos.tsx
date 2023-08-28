@@ -7,8 +7,9 @@ const Div = styled.div<{ visibility: string }>`
     will-change: opacity, visibility;
 `
 
-const Proyectos = () => {
-    const [darkMode, setDarkMode] = useState(false)
+interface ProyectosProps { darkMode: boolean }
+
+const Proyectos = ({ darkMode }: ProyectosProps) => {
     const [visible, setVisible] = useState(true)
     const domRef = useRef<HTMLDivElement>(null)
 
@@ -25,13 +26,6 @@ const Proyectos = () => {
         repo: 'https://github.com/DylanVallejo/kruger-grupal-project',
         link: 'https://kruger-grupal-project.vercel.app/'
     }]
-
-    useEffect(() => {
-        const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-        setDarkMode(darkModeMediaQuery.matches);
-        darkModeMediaQuery.addEventListener('change', e => setDarkMode(e.matches));
-        return () => darkModeMediaQuery.removeEventListener('change', e => setDarkMode(e.matches));
-    }, []);
 
     useEffect(() => {
         const observer = new IntersectionObserver(entries => {

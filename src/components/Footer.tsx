@@ -1,16 +1,8 @@
-import { useEffect, useState } from 'react';
 import CV from '/Jorge_Castro_Vargas.pdf'
 
-const Footer = () => {
-    const [darkMode, setDarkMode] = useState(false)
-    
-    useEffect(() => {
-        const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-        setDarkMode(darkModeMediaQuery.matches);
-        darkModeMediaQuery.addEventListener('change', e => setDarkMode(e.matches));
-        return () => darkModeMediaQuery.removeEventListener('change', e => setDarkMode(e.matches));
-    }, []);
-    
+interface FooterProps { darkMode: boolean }
+
+const Footer = ({ darkMode }: FooterProps) => {
     return (
         <>
             <div className="bg-primary bg-opacity-10 py-5">
