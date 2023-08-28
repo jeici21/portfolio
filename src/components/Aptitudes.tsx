@@ -47,7 +47,7 @@ const Aptitudes = ({ darkMode }: AptitudesProps) => {
                 <tbody>
                     {aptitudes.map((aptitud, index) => (
                         <tr key={index}>
-                            <td className="col-2">
+                            <td className="col-5 col-md-3">
                                 <img src={aptitud.icono} alt="Icono" width={30} height={30} /> {aptitud.nombre}
                             </td>
                             <td className="col">
