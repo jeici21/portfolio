@@ -54,7 +54,7 @@ const Aptitudes = () => {
                 <tbody>
                     {aptitudes.map((aptitud, index) => (
                         <tr key={index}>
-                            <td className="col-4">
+                            <td className="col-2">
                                 <img src={aptitud.icono} alt="Icono" width={30} height={30} /> {aptitud.nombre}
                             </td>
                             <td className="col">
