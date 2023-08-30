@@ -5,6 +5,7 @@ import CV from '/Jorge_Castro_Vargas.pdf'
 
 const Div = styled.div`
     background: linear-gradient(rgba(1, 33, 82, 0.5), rgba(1, 33, 82, 0.5)), url(${fondo}) fixed;
+    background-size: auto 125%;
 `;
 
 const H1 = styled.h1`
