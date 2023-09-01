@@ -1,11 +1,5 @@
 import { useEffect, useRef, useState } from "react"
-import { styled } from "styled-components"
-
-const Div = styled.div<{ visibility: string }>`
-    transform: ${props => props.visibility === 'true' ? 'none' : 'translateY(10vh)'};
-    transition: opacity 0.6s ease-out, transform 1.2s ease-out;
-    will-change: opacity, visibility;
-`
+import { FadeInDiv } from "../utils/styledUtils"
 
 const FormaciónYExp = () => {
     const [visible, setVisible] = useState(true)
@@ -21,7 +15,7 @@ const FormaciónYExp = () => {
 
     return (
         <div id="formacion-y-experiencia" className="container pt-5">
-            <Div visibility={String(visible)} ref={domRef}
+            <FadeInDiv visibility={String(visible)} ref={domRef}
                 className={`row ${visible ? 'opacity-100 visible' : 'opacity-0 invisible'}`}>
                 <div className="col-md-6">
                     <h2 className="fst-italic text-primary text-center text-md-start">Formación</h2>
@@ -40,7 +34,7 @@ const FormaciónYExp = () => {
                     <p className="pt-5 fw-bold">Septiembre 2020 - Noviembre 2020</p>
                     <p>GYSECOMP, Web Developer</p>
                 </div>
-            </Div>
+            </FadeInDiv>
         </div>
     )
 }

@@ -1,11 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { styled } from "styled-components";
-
-const Div = styled.div<{ visibility: string }>`
-    transform: ${props => props.visibility === 'true' ? 'none' : 'translateY(10vh)'};
-    transition: opacity 0.6s ease-out, transform 1.2s ease-out;
-    will-change: opacity, visibility;
-`
+import { FadeInDiv } from "../utils/styledUtils";
 
 interface ProyectosProps { darkMode: boolean }
 
@@ -36,7 +30,7 @@ const Proyectos = ({ darkMode }: ProyectosProps) => {
     }, [])
 
     return (
-        <Div visibility={String(visible)} id="proyectos" ref={domRef}
+        <FadeInDiv visibility={String(visible)} id="proyectos" ref={domRef}
             className={`container text-center py-5 ${visible ? 'opacity-100 visible' : 'opacity-0 invisible'}`}>
             <h2 className="fst-italic text-primary">Proyectos</h2>
             <p className="text-primary">MIS TRABAJOS HASTA EL MOMENTO</p>
@@ -59,7 +53,7 @@ const Proyectos = ({ darkMode }: ProyectosProps) => {
                     </div>
                 ))}
             </div>
-        </Div>
+        </FadeInDiv>
     )
 }
 

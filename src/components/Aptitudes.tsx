@@ -1,11 +1,6 @@
 import { useEffect, useRef, useState } from "react"
-import { styled } from "styled-components"
-
-const FadeInDiv = styled.div<{ visibility: string }>`
-    transform: ${props => props.visibility === 'true' ? 'none' : 'translateY(10vh)'};
-    transition: opacity 0.6s ease-out, transform 1.2s ease-out;
-    will-change: opacity, visibility;
-`
+import styled from "styled-components"
+import { FadeInDiv } from "../utils/styledUtils"
 
 const ProgressBarDiv = styled.div<{ width: number }>`
     width: ${props => props.width}%;
