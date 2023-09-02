@@ -10,6 +10,13 @@ const Span = styled.span`
 const Navbar = () => {
     const [active, setActive] = useState(0)
 
+    const links = [
+        { text: "Sobre mí", href: "#sobre-mi" },
+        { text: "Formación y experiencia", href: "#formacion-y-experiencia" },
+        { text: "Aptitudes", href: "#aptitudes" },
+        { text: "Proyectos", href: "#proyectos" },
+    ];
+
     return (
         <nav className="navbar navbar-expand-sm bg-primary">
             <div className="container-fluid">
@@ -20,30 +27,14 @@ const Navbar = () => {
                 </button>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0 fst-italic">
-                        <li className="nav-item ps-5">
-                            <a className={`nav-link text-light ${active === 0 && 'fw-bold'}`}
-                                onClick={() => setActive(0)} href="#sobre-mi">
-                                <Span>Sobre mí</Span>
-                            </a>
-                        </li>
-                        <li className="nav-item ps-5">
-                            <a className={`nav-link text-light ${active === 1 && 'fw-bold'}`}
-                                onClick={() => setActive(1)} href="#formacion-y-experiencia">
-                                <Span>Formación y experiencia</Span>
-                            </a>
-                        </li>
-                        <li className="nav-item ps-5">
-                            <a className={`nav-link text-light ${active === 2 && 'fw-bold'}`}
-                                onClick={() => setActive(2)} href="#aptitudes">
-                                <Span>Aptitudes</Span>
-                            </a>
-                        </li>
-                        <li className="nav-item ps-5">
-                            <a className={`nav-link text-light ${active === 3 && 'fw-bold'}`}
-                                onClick={() => setActive(3)} href="#proyectos">
-                                <Span>Proyectos</Span>
-                            </a>
-                        </li>
+                        {links.map((link, index) => (
+                            <li className="nav-item ps-5" key={index}>
+                                <a className={`nav-link text-light ${active === index && 'fw-bold'}`}
+                                    onClick={() => setActive(index)} href={link.href}>
+                                    <Span>{link.text}</Span>
+                                </a>
+                            </li>
+                        ))}
                     </ul>
                 </div>
             </div>
