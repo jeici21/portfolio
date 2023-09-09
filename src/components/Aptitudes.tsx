@@ -1,10 +1,14 @@
 import { useEffect, useRef, useState } from "react"
-import styled from "styled-components"
 import { FadeInDiv } from "../utils/styledUtils"
 import { aptitudes } from "../data/aptitudes"
+import styled from "styled-components"
 
-const ProgressBarDiv = styled.div<{ width: number }>`
-    width: ${props => props.width}%;
+const Img = styled.img`
+    transition: .2s;
+
+    &:hover {
+        transform: scale(1.1);
+    }
 `
 
 interface AptitudesProps { darkMode: boolean }
@@ -26,23 +30,18 @@ const Aptitudes = ({ darkMode }: AptitudesProps) => {
             className={`container pt-5 ${visible ? 'opacity-100 visible' : 'opacity-0 invisible'}`}>
             <h2 className="fst-italic text-primary text-center">Aptitudes</h2>
             <p className="text-primary text-center">LO QUE PUEDO APORTAR</p>
-            <table className={`table table-borderless ${darkMode && 'table-dark'}`}>
-                <tbody>
-                    {aptitudes.map((aptitud, index) => (
-                        <tr key={index}>
-                            <td className="col-5 col-md-3">
-                                <img src={aptitud.icono} alt="Icono" width={30} height={30} /> {aptitud.nombre}
-                            </td>
-                            <td className="col">
-                                <div className="progress" role="progressbar" aria-label={aptitud.nombre}
-                                    aria-valuenow={aptitud.valor} aria-valuemin={0} aria-valuemax={100}>
-                                    <ProgressBarDiv width={aptitud.valor} className='progress-bar progress-bar-striped progress-bar-animated' />
-                                </div>
-                            </td>
-                        </tr>
-                    ))}
-                </tbody>
-            </table>
+            <div className="row justify-content-center">
+                {aptitudes.map((aptitud, index) => (
+                    <div className="col-sm-6 col-md-4 col-lg-2 text-center" key={index}>
+                        <div className={`card ${darkMode && 'text-bg-dark border-0'}`}>
+                            <Img src={aptitud.icono} alt="Ícono" className="card-img-top" />
+                            <div className="card-body">
+                                <h4 className="card-title fw-bold">{aptitud.nombre}</h4>
+                            </div>
+                        </div>
+                    </div>
+                ))}
+            </div>
         </FadeInDiv>
     )
 }
