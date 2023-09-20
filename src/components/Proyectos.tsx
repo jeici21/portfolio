@@ -29,12 +29,12 @@ const Proyectos = ({ darkMode }: ProyectosProps) => {
                             <div className="card-body">
                                 <p className="card-title fw-bold">{proyecto.titulo}</p>
                                 <p className="card-text">{proyecto.descripcion}</p>
-                                {proyecto.repo && <a href={proyecto.repo} className="btn btn-success mx-1" target="_blank">
-                                    Ver repositorio
-                                </a>}
-                                <a href={proyecto.link} className="btn btn-danger mx-1" target="_blank">
-                                    Visitar página
-                                </a>
+                                {proyecto.repo && <a href={proyecto.repo} target="_blank" className="btn btn-success mx-1">
+                                    Repositorio {proyecto.repo_2 && '1'}</a>}
+                                {proyecto.repo_2 && <a href={proyecto.repo_2} target="_blank" className="btn btn-success mx-1">
+                                    Repositorio 2</a>}
+                                <a href={proyecto.link} target="_blank" className={`btn btn-danger ${proyecto.repo_2 ? 'm-1' : 'mx-1'}`}>
+                                    Sitio Web</a>
                             </div>
                         </div>
                     </div>
