@@ -27,7 +27,7 @@ const FormaciónYExp = () => {
                 <div className="col-md-6 pt-5 pt-md-0">
                     <h2 className="fst-italic text-primary text-center text-md-start">Experiencia</h2>
                     <p className="text-primary text-center text-md-start">TRAYECTORIA PROFESIONAL</p>
-                    <p className="pt-5 fw-bold">Junio 2023 - Actualidad</p>
+                    <p className="pt-5 fw-bold">Junio 2023 - Agosto 2023</p>
                     <p>EICHE, Web Developer Vue-React</p>
                     <p className="pt-5 fw-bold">Noviembre 2022 - Febrero 2023</p>
                     <p>Kruger Corporation, Ex participante de Kruger Star</p>
