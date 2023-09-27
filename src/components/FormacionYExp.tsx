@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react"
 import { FadeInDiv } from "../utils/styledUtils"
 
-const FormaciónYExp = () => {
+const FormacionYExp = () => {
     const [visible, setVisible] = useState(true)
     const domRef = useRef<HTMLDivElement>(null)
 
@@ -39,4 +39,4 @@ const FormaciónYExp = () => {
     )
 }
 
-export default FormaciónYExp
+export default FormacionYExp

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import Aptitudes from "./components/Aptitudes"
 import Footer from "./components/Footer"
-import FormaciónYExp from "./components/FormaciónYExp"
+import FormacionYExp from "./components/FormacionYExp"
 import Navbar from "./components/Navbar"
 import Portada from "./components/Portada"
 import Proyectos from "./components/Proyectos"
@@ -22,7 +22,7 @@ function App() {
       <Navbar />
       <Portada />
       <SobreMi />
-      <FormaciónYExp />
+      <FormacionYExp />
       <Aptitudes darkMode={darkMode} />
       <Proyectos darkMode={darkMode} />
       <Footer darkMode={darkMode} />
