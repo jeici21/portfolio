@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 import fondo from '../assets/fondo.jpg'
 import yo from '../assets/yo.jpeg'
-import CV from '/Jorge_Castro_Vargas.pdf'
 
 const Div = styled.div`
     background: linear-gradient(rgba(1, 33, 82, 0.5), rgba(1, 33, 82, 0.5)), url(${fondo}) fixed;
@@ -41,7 +40,7 @@ const Portada = () => {
                         <a href="https://github.com/jeici21" target='_blank' title="GitHub"
                             rel="noopener noreferrer" className='col bi bi-github text-white' />
                     </div>
-                    <button onClick={() => window.open(CV, '_blank')}
+                    <button onClick={() => window.open("https://1drv.ms/b/s!AmoVp6TBUcPb2GLIuS1R0-TOq4d7?e=3BST4b", '_blank')}
                         className='btn btn-light btn-lg my-5 rounded-0' aria-label="Descargar CV">
                         <i className="bi bi-download" /> Descargar CV
                     </button>

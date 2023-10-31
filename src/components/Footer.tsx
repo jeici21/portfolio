@@ -1,5 +1,3 @@
-import CV from '/Jorge_Castro_Vargas.pdf'
-
 interface FooterProps { darkMode: boolean }
 
 const Footer = ({ darkMode }: FooterProps) => {
@@ -29,8 +27,8 @@ const Footer = ({ darkMode }: FooterProps) => {
                             <p>Tel: +593997543298</p>
                             <div className='row justify-content-around align-items-center pt-5'>
                                 <div className='col-auto'>
-                                    <button onClick={() => window.open(CV, '_blank')} aria-label="Descargar CV"
-                                        className='btn btn-primary btn-lg rounded-0'>
+                                    <button onClick={() => window.open("https://1drv.ms/b/s!AmoVp6TBUcPb2GLIuS1R0-TOq4d7?e=3BST4b", '_blank')}
+                                        aria-label="Descargar CV" className='btn btn-primary btn-lg rounded-0'>
                                         <i className="bi bi-download" /> Descargar CV
                                     </button>
                                 </div>
