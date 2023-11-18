@@ -1,18 +1,21 @@
 body {
-    font-family: 'Century Gothic', Garamond, 'Gill Sans Nova', sans-serif;
+  font-family: 'Century Gothic', Garamond, 'Gill Sans Nova', sans-serif;
 }
 
-nav a, h5, h2, footer {
-    font-family: 'Times New Roman', Times, serif;
+nav a,
+h5,
+h2,
+footer {
+  font-family: 'Times New Roman', Times, serif;
 }
 
 h1 {
-    font-family: Elephant, Britannic, sans-serif;
+  font-family: Elephant, Britannic, sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
-    body {
-        background-color: #212529;
-        color: white;
-    }
+  body {
+    background-color: #212529;
+    color: white;
+  }
 }
