@@ -32,13 +32,13 @@ const Portada = () => {
           <p>Tel: +593997543298</p>
           <div className='row px-5 fs-5'>
             <a href="https://www.linkedin.com/in/jorge-castro-vargas-7242a8129/" target='_blank'
-              rel="noopener noreferrer" className='col bi bi-linkedin text-white' title="LinkedIn" />
+              rel="noopener noreferrer" className='col bi bi-linkedin link-light' title="LinkedIn" />
             <a href="https://www.facebook.com/jeici21/" target='_blank' title="Facebook"
-              rel="noopener noreferrer" className='col bi bi-facebook text-white' />
+              rel="noopener noreferrer" className='col bi bi-facebook link-light' />
             <a href="https://twitter.com/cijei21" target='_blank' title="Twitter"
-              rel="noopener noreferrer" className='col bi bi-twitter text-white' />
+              rel="noopener noreferrer" className='col bi bi-twitter link-light' />
             <a href="https://github.com/jeici21" target='_blank' title="GitHub"
-              rel="noopener noreferrer" className='col bi bi-github text-white' />
+              rel="noopener noreferrer" className='col bi bi-github link-light' />
           </div>
           <button onClick={() => window.open("https://1drv.ms/b/s!AmoVp6TBUcPb2GLIuS1R0-TOq4d7?e=3BST4b", '_blank')}
             className='btn btn-light btn-lg my-5 rounded-0' aria-label="Descargar CV">
