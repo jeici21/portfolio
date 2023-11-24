@@ -1,11 +1,4 @@
 import { useState } from "react"
-import styled from "styled-components"
-
-const Span = styled.span`
-  &:hover {
-    color: silver;
-  }
-`
 
 const Navbar = () => {
   const [active, setActive] = useState(0)
@@ -18,19 +11,19 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="navbar navbar-expand-sm bg-primary">
+    <nav className="navbar navbar-expand-sm bg-primary" data-bs-theme="dark">
       <div className="container-fluid">
         <button className="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
           data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
           aria-expanded="false" aria-label="Toggle navigation">
-          <i className="bi bi-list text-light" />
+          <i className="bi bi-list" />
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0 fst-italic">
             {links.map((link, index) => (
               <li className="nav-item ps-5" key={index}>
-                <a className={`nav-link link-light ${active === index && 'fw-bold'}`}
-                  onClick={() => setActive(index)} href={link.href}><Span>{link.text}</Span></a>
+                <a className={`nav-link ${active === index && 'active'}`}
+                  onClick={() => setActive(index)} href={link.href}>{link.text}</a>
               </li>
             ))}
           </ul>
