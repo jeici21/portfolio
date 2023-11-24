@@ -24,7 +24,7 @@ const Proyectos = ({ darkMode }: ProyectosProps) => {
       <div className="row row-gap-2 justify-content-center">
         {proyectos.map((proyecto, index) => (
           <div className="col-md-6 col-lg-4" key={index}>
-            <div className={`card ${darkMode && 'text-bg-dark border-light'}`}>
+            <div className={`card ${darkMode && 'text-bg-dark border-light h-100'}`}>
               <img src={proyecto.img} className="card-img-top" alt="K-Market E-commerce" height={180} />
               <div className="card-body">
                 <p className="card-title fw-bold">{proyecto.titulo}</p>
@@ -32,9 +32,8 @@ const Proyectos = ({ darkMode }: ProyectosProps) => {
                 {proyecto.repo && <a href={proyecto.repo} target="_blank" className="btn btn-success mx-1">
                   Repositorio {proyecto.repo_2 && '1'}</a>}
                 {proyecto.repo_2 && <a href={proyecto.repo_2} target="_blank" className="btn btn-success mx-1">
-                  Repositorio 2</a>}
-                <a href={proyecto.link} target="_blank" className={`btn btn-danger ${proyecto.repo_2 ? 'm-1' : 'mx-1'}`}>
-                  Sitio Web</a>
+                  Repositorio 2</a>}<br />
+                <a href={proyecto.link} target="_blank" className={`btn btn-danger mt-2`}>Sitio Web</a>
               </div>
             </div>
           </div>
