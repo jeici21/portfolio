@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import Aptitudes from "./components/Aptitudes"
 import Footer from "./components/Footer"
 import FormacionYExp from "./components/FormacionYExp"
-import Navbar from "./components/Navbar"
+import Navigation from "./components/Navigation"
 import Portada from "./components/Portada"
 import Proyectos from "./components/Proyectos"
 import SobreMi from "./components/Sobremi"
@@ -19,7 +19,7 @@ function App() {
 
   return (
     <>
-      <Navbar />
+      <Navigation />
       <Portada />
       <SobreMi />
       <FormacionYExp />
