@@ -22,7 +22,7 @@ const Navbar = () => {
           <ul className="navbar-nav me-auto mb-2 mb-lg-0 fst-italic">
             {links.map((link, index) => (
               <li className="nav-item ps-5" key={index}>
-                <a className={`nav-link ${active === index && 'active'}`}
+                <a className={`nav-link ${active === index && 'active'}`} aria-current={active === index ? 'page' : undefined}
                   onClick={() => setActive(index)} href={link.href}>{link.text}</a>
               </li>
             ))}
