@@ -47,7 +47,7 @@ const Portada = () => {
             </a></Col>
             <Col><a href="https://twitter.com/cijei21" target='_blank' title="X"
               rel="noopener noreferrer">
-              <i className='bi bi-twitter-x link-light' />
+              <i className='bi bi-twitter link-light' />
             </a></Col>
             <Col>
               <a href="https://github.com/jeici21" target='_blank' title="GitHub"
