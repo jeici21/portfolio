@@ -15,13 +15,13 @@ const Footer = ({ darkMode }: FooterProps) => {
               <h2 className="fst-italic text-primary">Mis redes sociales</h2>
               <div className='d-flex flex-row justify-content-center column-gap-4 fs-5 pt-5'>
                 <a href="https://www.linkedin.com/in/jorge-castro-vargas-7242a8129/" target='_blank'
-                  rel="noopener noreferrer" className='bi bi-linkedin' title="LinkedIn" />
+                  rel="noopener noreferrer" title="LinkedIn"><i className='bi bi-linkedin' /></a>
                 <a href="https://www.facebook.com/jeici21/" target='_blank'
-                  rel="noopener noreferrer" className='bi bi-facebook' title="Facebook" />
+                  rel="noopener noreferrer" title="Facebook"><i className='bi bi-facebook' /></a>
                 <a href="https://twitter.com/cijei21" target='_blank'
-                  rel="noopener noreferrer" className='bi bi-twitter' title="Twitter" />
+                  rel="noopener noreferrer" title="Twitter"><i className='bi bi-twitter' /></a>
                 <a href="https://github.com/jeici21" target='_blank'
-                  rel="noopener noreferrer" className='bi bi-github' title="GitHub" />
+                  rel="noopener noreferrer" title="GitHub"><i className='bi bi-github' /></a>
               </div>
             </Col>
             <Col md={6} className="text-center pt-5 pt-md-0">
@@ -29,13 +29,13 @@ const Footer = ({ darkMode }: FooterProps) => {
                 david92_jc@yahoo.es</a>
               <p>Tel: +593997543298</p>
               <Row className='justify-content-around align-items-center pt-5'>
-                <Col className='col-auto'>
+                <Col xs='auto'>
                   <Button variant="primary" size="lg" aria-label="Descargar CV" className='rounded-0'
-                  onClick={() => window.open("https://1drv.ms/b/s!AmoVp6TBUcPb2GLIuS1R0-TOq4d7?e=3BST4b", '_blank')}>
+                    onClick={() => window.open("https://1drv.ms/b/s!AmoVp6TBUcPb2GLIuS1R0-TOq4d7?e=3BST4b", '_blank')}>
                     <i className="bi bi-download" /> Descargar CV
                   </Button>
                 </Col>
-                <Col className='col-auto'>
+                <Col xs='auto'>
                   <Button variant="outline-primary" onClick={() => window.scrollTo(0, 0)} title='Volver al Inicio'
                     className='border-2 rounded-circle'>
                     <i className='bi bi-chevron-up' />
