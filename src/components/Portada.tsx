@@ -38,22 +38,13 @@ const Portada = () => {
           <p>Tel: +593997543298</p>
           <Row className='px-5 fs-5'>
             <Col><a href="https://www.linkedin.com/in/jorge-castro-vargas-7242a8129/" target='_blank'
-              rel="noopener noreferrer" title="LinkedIn">
-              <i className='bi bi-linkedin link-light' />
-            </a></Col>
+              rel="noopener noreferrer" title="LinkedIn"><i className='bi bi-linkedin text-light' /></a></Col>
             <Col><a href="https://www.facebook.com/jeici21/" target='_blank' title="Facebook"
-              rel="noopener noreferrer">
-              <i className='bi bi-facebook link-light' />
-            </a></Col>
+              rel="noopener noreferrer"><i className='bi bi-facebook text-light' /></a></Col>
             <Col><a href="https://twitter.com/cijei21" target='_blank' title="X"
-              rel="noopener noreferrer">
-              <i className='bi bi-twitter link-light' />
-            </a></Col>
-            <Col>
-              <a href="https://github.com/jeici21" target='_blank' title="GitHub"
-                rel="noopener noreferrer">
-                <i className='bi bi-github link-light' />
-              </a></Col>
+              rel="noopener noreferrer"><i className='bi bi-twitter-x text-light' /></a></Col>
+            <Col><a href="https://github.com/jeici21" target='_blank' title="GitHub"
+              rel="noopener noreferrer"><i className='bi bi-github text-light' /></a></Col>
           </Row>
           <Button variant='light' size='lg' className='my-5 rounded-0'
             onClick={() => window.open("https://1drv.ms/b/s!AmoVp6TBUcPb2GLIuS1R0-TOq4d7?e=3BST4b", '_blank')}>

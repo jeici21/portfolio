@@ -19,7 +19,7 @@ const Footer = ({ darkMode }: FooterProps) => {
                 <a href="https://www.facebook.com/jeici21/" target='_blank'
                   rel="noopener noreferrer" title="Facebook"><i className='bi bi-facebook' /></a>
                 <a href="https://twitter.com/cijei21" target='_blank'
-                  rel="noopener noreferrer" title="X"><i className='bi bi-twitter' /></a>
+                  rel="noopener noreferrer" title="X"><i className='bi bi-twitter-x' /></a>
                 <a href="https://github.com/jeici21" target='_blank'
                   rel="noopener noreferrer" title="GitHub"><i className='bi bi-github' /></a>
               </div>
