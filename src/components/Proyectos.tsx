@@ -29,7 +29,7 @@ const Proyectos = ({ darkMode }: ProyectosProps) => {
       <Row className="row-gap-2 justify-content-center">
         {proyectos.map((proyecto, index) => (
           <Col md={6} lg={4} key={index}>
-            <Card className={`${darkMode && 'text-bg-dark border-light h-100'}`}>
+            <Card bg={darkMode ? 'dark' : ''} text={darkMode ? 'light' : ''} border='secondary' className='h-100'>
               <Card.Img variant="top" src={proyecto.img} alt="K-Market E-commerce" height={180} />
               <Card.Body>
                 <Card.Title className="fw-bold">{proyecto.titulo}</Card.Title>

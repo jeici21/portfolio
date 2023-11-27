@@ -37,7 +37,7 @@ const Aptitudes = ({ darkMode }: AptitudesProps) => {
       <Row className="justify-content-center">
         {aptitudes.map((aptitud, index) => (
           <Col xs={6} md={4} lg={2} className="text-center" key={index}>
-            <Card className={`border-0 ${darkMode && 'text-bg-dark'}`}>
+            <Card bg={darkMode ? 'dark' : ''} text={darkMode ? 'light' : ''} border="0">
               <Img as={Card.Img} variant="top" src={aptitud.icono} alt="Ícono" />
               <Card.Body><Card.Title className="fw-bold">{aptitud.nombre}</Card.Title></Card.Body>
             </Card>
