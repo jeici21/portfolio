@@ -25,8 +25,8 @@ const Footer = ({ darkMode }: FooterProps) => {
               </div>
             </Col>
             <Col md={6} className="text-center pt-5 pt-md-0">
-              <a href="mailto:david92_jc@yahoo.es" className={`${darkMode ? 'link-light' : 'link-dark'} link-underline-opacity-0 link-underline-opacity-100-hover`}>
-                david92_jc@yahoo.es</a>
+              <a className={`${darkMode ? 'link-light' : 'link-dark'} link-underline-opacity-0 link-underline-opacity-100-hover`}
+                href="mailto:david92_jc@yahoo.es">david92_jc@yahoo.es</a>
               <p>Tel: +593997543298</p>
               <Row className='justify-content-around align-items-center pt-5'>
                 <Col xs='auto'>

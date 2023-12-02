@@ -38,7 +38,9 @@ const Proyectos = ({ darkMode }: ProyectosProps) => {
                   Repositorio {proyecto.repo_2 && '1'}</Button>}
                 {proyecto.repo_2 && <Button href={proyecto.repo_2} variant="success" target="_blank" className="mx-1">
                   Repositorio 2</Button>}<br />
-                <Button href={proyecto.link} variant="danger" target="_blank" className='mt-2'>Sitio Web</Button>
+                <Button href={proyecto.link} variant="danger" target="_blank" className='mt-2'>
+                  Sitio Web
+                </Button>
               </Card.Body>
             </Card>
           </Col>
