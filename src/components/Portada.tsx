@@ -6,6 +6,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Image from "react-bootstrap/Image";
 import Button from "react-bootstrap/Button";
+import Stack from "react-bootstrap/Stack";
 
 const Div = styled.div`
   background: linear-gradient(rgba(1, 33, 82, 0.5), rgba(1, 33, 82, 0.5)), url(${fondo}) fixed;
@@ -20,7 +21,7 @@ const Portada = () => {
   return (
     <Container fluid>
       <Row>
-        <Div as={Col} md={9} className="text-light d-flex flex-column align-items-center justify-content-end position-relative pt-5 pt-md-0">
+        <Div as={Col} md={9} className="text-light d-flex flex-column align-items-center justify-content-end pt-5 pt-md-0">
           <div className='z-1 position-relative'>
             <p className='fs-5'>HOLA, SOY</p>
             <H1 className='fw-bold'>Jorge Castro</H1>
@@ -35,16 +36,16 @@ const Portada = () => {
             david92_jc@yahoo.es
           </a>
           <p>Tel: +593997543298</p>
-          <Row className='px-5 fs-5'>
-            <Col><a href="https://www.linkedin.com/in/jorge-castro-vargas-7242a8129/" target='_blank'
-              rel="noopener noreferrer" title="LinkedIn"><i className='bi bi-linkedin text-light' /></a></Col>
-            <Col><a href="https://www.facebook.com/jeici21/" target='_blank' title="Facebook"
-              rel="noopener noreferrer"><i className='bi bi-facebook text-light' /></a></Col>
-            <Col><a href="https://twitter.com/cijei21" target='_blank' title="X"
-              rel="noopener noreferrer"><i className='bi bi-twitter-x text-light' /></a></Col>
-            <Col><a href="https://github.com/jeici21" target='_blank' title="GitHub"
-              rel="noopener noreferrer"><i className='bi bi-github text-light' /></a></Col>
-          </Row>
+          <Stack direction="horizontal" gap={4} className='justify-content-center fs-5'>
+            <a href="https://www.linkedin.com/in/jorge-castro-vargas-7242a8129/" target='_blank'
+              rel="noopener noreferrer" title="LinkedIn"><i className='bi bi-linkedin text-light' /></a>
+            <a href="https://www.facebook.com/jeici21/" target='_blank' title="Facebook"
+              rel="noopener noreferrer"><i className='bi bi-facebook text-light' /></a>
+            <a href="https://twitter.com/cijei21" target='_blank' title="X"
+              rel="noopener noreferrer"><i className='bi bi-twitter-x text-light' /></a>
+            <a href="https://github.com/jeici21" target='_blank' title="GitHub"
+              rel="noopener noreferrer"><i className='bi bi-github text-light' /></a>
+          </Stack>
           <Button variant='light' size='lg' className='my-5 rounded-0'
             onClick={() => window.open("https://1drv.ms/b/s!AmoVp6TBUcPb2GLIuS1R0-TOq4d7?e=3BST4b", '_blank')}>
             <i className="bi bi-download" /> Descargar CV

@@ -2,6 +2,7 @@ import Row from "react-bootstrap/Row"
 import Container from "react-bootstrap/Container"
 import Col from "react-bootstrap/Col"
 import Button from "react-bootstrap/Button"
+import Stack from "react-bootstrap/Stack"
 
 interface FooterProps { darkMode: boolean }
 
@@ -13,7 +14,7 @@ const Footer = ({ darkMode }: FooterProps) => {
           <Row>
             <Col md={6} className="text-center">
               <h2 className="fst-italic text-primary">Mis redes sociales</h2>
-              <div className='d-flex flex-row justify-content-center column-gap-4 fs-5 pt-5'>
+              <Stack direction="horizontal" gap={4} className='justify-content-center fs-5 pt-5'>
                 <a href="https://www.linkedin.com/in/jorge-castro-vargas-7242a8129/" target='_blank'
                   rel="noopener noreferrer" title="LinkedIn"><i className='bi bi-linkedin' /></a>
                 <a href="https://www.facebook.com/jeici21/" target='_blank'
@@ -22,7 +23,7 @@ const Footer = ({ darkMode }: FooterProps) => {
                   rel="noopener noreferrer" title="X"><i className='bi bi-twitter-x' /></a>
                 <a href="https://github.com/jeici21" target='_blank'
                   rel="noopener noreferrer" title="GitHub"><i className='bi bi-github' /></a>
-              </div>
+              </Stack>
             </Col>
             <Col md={6} className="text-center pt-5 pt-md-0">
               <a className={`${darkMode ? 'link-light' : 'link-dark'} link-underline-opacity-0 link-underline-opacity-100-hover`}

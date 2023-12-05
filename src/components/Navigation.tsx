@@ -6,7 +6,7 @@ const Navigation = () => {
   const [active, setActive] = useState(0)
 
   return (
-    <Navbar expand="sm" bg="primary" variant="dark" sticky="top">
+    <Navbar expand="md" bg="primary" variant="dark" sticky="top">
       <Navbar.Toggle aria-controls="basic-navbar-bar" />
       <Navbar.Collapse id="basic-navbar-bar">
         <Nav className="me-auto fst-italic">
