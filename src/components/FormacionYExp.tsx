@@ -17,7 +17,7 @@ const FormacionYExp = () => {
   }, [])
 
   return (
-    <Container id="formacion-y-experiencia" className="pt-5">
+    <Container id="formacion-y-exp" className="pt-5">
       <FadeInDiv as={Row} visibility={String(visible)} ref={domRef} className={visible ? 'opacity-100 visible' : 'opacity-0 invisible'}>
         <Col md={6}>
           <h2 className="fst-italic text-primary text-center text-md-start">Formación</h2>
