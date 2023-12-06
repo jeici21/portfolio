@@ -7,7 +7,7 @@ const Navigation = () => {
 
   return (
     <Navbar expand="md" bg="primary" variant="dark" sticky="top">
-      <Navbar.Toggle aria-controls="basic-navbar-bar" className="ms-auto" />
+      <Navbar.Toggle aria-controls="basic-navbar-bar" className="ms-auto me-1" />
       <Navbar.Collapse id="basic-navbar-bar">
         <Nav className="me-auto fst-italic text-center">
           <Nav.Item className="ps-md-5">
