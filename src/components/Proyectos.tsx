@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from "react";
-import { FadeInDiv } from "../utils/styledUtils";
 import { proyectos } from "../data/proyectos";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -22,8 +21,7 @@ const Proyectos = ({ darkMode }: ProyectosProps) => {
   }, [])
 
   return (
-    <FadeInDiv as={Container} visibility={String(visible)} id="proyectos" ref={domRef}
-      className={`text-center py-5 ${visible ? 'opacity-100 visible' : 'opacity-0 invisible'}`}>
+    <Container id="proyectos" ref={domRef} className={`text-center py-5 ${visible ? 'opacity-100 visible fadeInDiv open' : 'opacity-0 invisible fadeInDiv hidden'}`}>
       <h2 className="fst-italic text-primary">Proyectos</h2>
       <p className="text-primary">MIS TRABAJOS HASTA EL MOMENTO</p>
       <Row className="row-gap-2 justify-content-center">
@@ -46,7 +44,7 @@ const Proyectos = ({ darkMode }: ProyectosProps) => {
           </Col>
         ))}
       </Row>
-    </FadeInDiv>
+    </Container>
   )
 }
 

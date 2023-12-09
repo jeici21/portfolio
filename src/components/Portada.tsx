@@ -1,6 +1,5 @@
 import Container from "react-bootstrap/Container";
-import styled from "styled-components";
-import fondo from '../assets/fondo.jpg'
+import styles from '../styles/Portada.module.css'
 import yo from '../assets/yo.jpeg'
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -8,26 +7,17 @@ import Image from "react-bootstrap/Image";
 import Button from "react-bootstrap/Button";
 import Stack from "react-bootstrap/Stack";
 
-const Div = styled.div`
-  background: linear-gradient(rgba(1, 33, 82, 0.5), rgba(1, 33, 82, 0.5)), url(${fondo}) fixed;
-  background-size: auto 125%;
-`;
-
-const H1 = styled.h1`
-  font-size: 5rem;
-`
-
 const Portada = () => {
   return (
     <Container fluid>
       <Row>
-        <Div as={Col} md={9} className="text-light d-flex flex-column align-items-center justify-content-end pt-5 pt-md-0">
+        <Col md={9} className={`text-light d-flex flex-column align-items-center justify-content-end pt-5 pt-md-0 ${styles.portadaDiv}`}>
           <div className='z-1 position-relative'>
             <p className='fs-5'>HOLA, SOY</p>
-            <H1 className='fw-bold'>Jorge Castro</H1>
+            <h1 className={`fw-bold ${styles.nombreH1}`}>Jorge Castro</h1>
             <h5 className='fst-italic'>Ingeniero en Sistemas Computacionales</h5>
           </div>
-        </Div>
+        </Col>
         <Col md={3} className='text-bg-primary text-center pt-5 pt-md-0'>
           <Image src={yo} alt="Yo" width="150" height='150' roundedCircle />
           <h1 className='fw-bold pt-5'>Jorge Castro</h1>

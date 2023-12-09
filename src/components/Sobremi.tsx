@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from "react"
-import { FadeInDiv } from "../utils/styledUtils"
 import Container from "react-bootstrap/Container"
 import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
@@ -19,7 +18,7 @@ const SobreMi = () => {
   return (
     <div className="bg-primary bg-opacity-10 pt-5" id="sobre-mi">
       <Container>
-        <FadeInDiv as={Row} visibility={String(visible)} ref={domRef} className={visible ? 'opacity-100 visible' : 'opacity-0 invisible'}>
+        <Row ref={domRef} className={visible ? 'opacity-100 visible fadeInDiv open' : 'opacity-0 invisible fadeInDiv hidden'}>
           <Col md={6}>
             <h2 className="fst-italic text-primary text-center text-md-start">Sobre mí</h2>
             <p className="text-primary text-center text-md-start">MI PERFIL</p>
@@ -39,7 +38,7 @@ const SobreMi = () => {
               <Col><p>📖 Lectura</p></Col>
             </Row>
           </Col>
-        </FadeInDiv>
+        </Row>
       </Container>
     </div>
   )

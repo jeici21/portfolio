@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from "react"
-import { FadeInDiv } from "../utils/styledUtils"
 import Container from "react-bootstrap/Container"
 import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
@@ -18,7 +17,7 @@ const FormacionYExp = () => {
 
   return (
     <Container id="formacion-y-exp" className="pt-5">
-      <FadeInDiv as={Row} visibility={String(visible)} ref={domRef} className={visible ? 'opacity-100 visible' : 'opacity-0 invisible'}>
+      <Row ref={domRef} className={visible ? 'opacity-100 visible fadeInDiv open' : 'opacity-0 invisible fadeInDiv hidden'}>
         <Col md={6}>
           <h2 className="fst-italic text-primary text-center text-md-start">Formación</h2>
           <p className="text-primary text-center text-md-start">MIS CONOCIMIENTOS</p>
@@ -36,7 +35,7 @@ const FormacionYExp = () => {
           <p className="pt-5 fw-bold">Septiembre 2020 - Noviembre 2020</p>
           <p>GYSECOMP, Web Developer</p>
         </Col>
-      </FadeInDiv>
+      </Row>
     </Container>
   )
 }
