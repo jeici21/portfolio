@@ -36,10 +36,9 @@ const Portada = () => {
             <a href="https://github.com/jeici21" target='_blank' title="GitHub"
               rel="noopener noreferrer"><i className='bi bi-github text-light' /></a>
           </Stack>
-          <Button variant='light' size='lg' className='my-5 rounded-0'
-            onClick={() => window.open("https://1drv.ms/b/s!AmoVp6TBUcPb2GLIuS1R0-TOq4d7?e=3BST4b", '_blank')}>
-            <i className="bi bi-download" /> Descargar CV
-          </Button>
+          <Button variant='light' size='lg' className='my-5 rounded-0' rel="noopener noreferrer"
+            href="https://1drv.ms/b/s!AmoVp6TBUcPb2GLIuS1R0-TOq4d7?e=3BST4b" target="_blank">
+            <i className="bi bi-download" /> Descargar CV</Button>
         </Col>
       </Row>
     </Container>

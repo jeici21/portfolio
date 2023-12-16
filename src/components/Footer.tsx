@@ -32,15 +32,12 @@ const Footer = ({ darkMode }: FooterProps) => {
               <Row className='justify-content-around align-items-center pt-5'>
                 <Col xs='auto'>
                   <Button variant="primary" size="lg" aria-label="Descargar CV" className='rounded-0'
-                    onClick={() => window.open("https://1drv.ms/b/s!AmoVp6TBUcPb2GLIuS1R0-TOq4d7?e=3BST4b", '_blank')}>
-                    <i className="bi bi-download" /> Descargar CV
-                  </Button>
+                    href="https://1drv.ms/b/s!AmoVp6TBUcPb2GLIuS1R0-TOq4d7?e=3BST4b" target="_blank"
+                    rel="noopener noreferrer"><i className="bi bi-download" /> Descargar CV</Button>
                 </Col>
                 <Col xs='auto'>
                   <Button variant="outline-primary" onClick={() => window.scrollTo(0, 0)} title='Volver al Inicio'
-                    className='border-2 rounded-circle'>
-                    <i className='bi bi-chevron-up' />
-                  </Button>
+                    className='border-2 rounded-circle'><i className='bi bi-chevron-up' /></Button>
                 </Col>
               </Row>
             </Col>
