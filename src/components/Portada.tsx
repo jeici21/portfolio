@@ -19,12 +19,11 @@ const Portada = () => {
           </div>
         </Col>
         <Col md={3} className='text-bg-primary text-center pt-5 pt-md-0'>
-          <Image src={yo} alt="Yo" width="150" height='150' roundedCircle />
+          <Image src={yo} alt="Yo" width={200} height={200} roundedCircle />
           <h1 className='fw-bold pt-5'>Jorge Castro</h1>
           <p className='py-4'>Ingeniero en Sistemas Computacionales.<br />Universidad Estatal de Milagro</p>
           <a href="mailto:david92_jc@yahoo.es" className='link-light link-underline-opacity-0 link-underline-opacity-100-hover'>
-            david92_jc@yahoo.es
-          </a>
+            david92_jc@yahoo.es</a>
           <p>Tel: +593997543298</p>
           <Stack direction="horizontal" gap={4} className='justify-content-center fs-5'>
             <a href="https://www.linkedin.com/in/jorge-castro-vargas-7242a8129/" target='_blank'

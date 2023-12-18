@@ -44,7 +44,7 @@ const Footer = ({ darkMode }: FooterProps) => {
           </Row>
         </Container>
       </div>
-      <footer className="bg-primary text-white fst-italic ps-5 py-4">
+      <footer className="bg-primary text-white fst-italic ps-5 py-3">
         © {new Date().getFullYear()} Diseñado por Jorge Castro Vargas.
       </footer>
     </>
