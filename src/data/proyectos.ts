@@ -19,4 +19,11 @@ export const proyectos = [{
   repo: 'https://github.com/jeici21/pokeapi-front',
   repo_2: 'https://github.com/jeici21/pokeapi-back',
   link: 'https://pokeapi-jc.netlify.app/'
+}, {
+  img: "https://i.imgur.com/kmgluay.png",
+  titulo: 'EMILKEN',
+  descripcion: 'Mi primer trabajo, la beta de un sitio web para una empresa de mantenimiento de equipos de climatización.',
+  repo: '',
+  repo_2: '',
+  link: 'https://emilken.netlify.app/'
 }]

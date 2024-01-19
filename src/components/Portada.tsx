@@ -14,7 +14,7 @@ const Portada = () => {
         <Col md={9} className={`text-light d-flex flex-column align-items-center justify-content-end pt-5 pt-md-0 ${styles.portadaDiv}`}>
           <div className='z-1 position-relative'>
             <p className='fs-5'>HOLA, SOY</p>
-            <h1 className={`fw-bold ${styles.nombreH1}`}>Jorge Castro</h1>
+            <h1 className='fw-bold display-1'>Jorge Castro</h1>
             <h5 className='fst-italic'>Ingeniero en Sistemas Computacionales</h5>
           </div>
         </Col>
