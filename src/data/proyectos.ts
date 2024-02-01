@@ -32,5 +32,5 @@ export const proyectos = [{
   descripcion: 'Mi segundo trabajo, el diseño preliminar de un sitio web para una picantería, con carrito de compras funcional.',
   repo: '',
   repo_2: '',
-  link: 'https://emilken.netlify.app/'
+  link: 'https://komesutra.netlify.app/'
 }]
