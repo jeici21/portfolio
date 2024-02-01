@@ -26,4 +26,11 @@ export const proyectos = [{
   repo: '',
   repo_2: '',
   link: 'https://emilken.netlify.app/'
+}, {
+  img: "https://i.imgur.com/94vqbrr.png",
+  titulo: 'Komesutra',
+  descripcion: 'Mi segundo trabajo, el diseño preliminar de un sitio web para una picantería, con carrito de compras funcional.',
+  repo: '',
+  repo_2: '',
+  link: 'https://emilken.netlify.app/'
 }]
